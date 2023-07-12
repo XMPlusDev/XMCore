@@ -1,9 +1,9 @@
-package log // import "github.com/xcode75/xcore/common/log"
+package log // import "github.com/xmplusdev/xmcore/common/log"
 
 import (
 	"sync"
 
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/serial"
 )
 
 // Message is the interface for all log messages.

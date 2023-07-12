@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package xray.proxy.trojan;
 option csharp_namespace = "Xray.Proxy.Trojan";
-option go_package = "github.com/xcode75/xcore/proxy/trojan";
+option go_package = "github.com/xmplusdev/xmcore/proxy/trojan";
 option java_package = "com.xray.proxy.trojan";
 option java_multiple_files = true;
 

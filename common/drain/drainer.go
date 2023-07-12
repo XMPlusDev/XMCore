@@ -4,7 +4,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/xcode75/xcore/common/dice"
+	"github.com/xmplusdev/xmcore/common/dice"
 )
 
 type BehaviorSeedLimitedDrainer struct {

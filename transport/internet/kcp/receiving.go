@@ -3,7 +3,7 @@ package kcp
 import (
 	"sync"
 
-	"github.com/xcode75/xcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/buf"
 )
 
 type ReceivingWindow struct {

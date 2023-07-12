@@ -1,9 +1,9 @@
 package conf
 
 import (
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/transport/global"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/transport/global"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 type TransportConfig struct {

@@ -7,13 +7,13 @@ import (
 	"testing"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/app/dns"
-	"github.com/xcode75/xcore/app/router"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/platform"
-	"github.com/xcode75/xcore/common/platform/filesystem"
-	. "github.com/xcode75/xcore/infra/conf"
+	"github.com/xmplusdev/xmcore/app/dns"
+	"github.com/xmplusdev/xmcore/app/router"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/platform"
+	"github.com/xmplusdev/xmcore/common/platform/filesystem"
+	. "github.com/xmplusdev/xmcore/infra/conf"
 )
 
 func init() {

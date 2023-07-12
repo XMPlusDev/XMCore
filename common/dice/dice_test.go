@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"testing"
 
-	. "github.com/xcode75/xcore/common/dice"
+	. "github.com/xmplusdev/xmcore/common/dice"
 )
 
 func BenchmarkRoll1(b *testing.B) {

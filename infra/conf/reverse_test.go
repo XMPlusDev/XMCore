@@ -3,8 +3,8 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/app/reverse"
-	"github.com/xcode75/xcore/infra/conf"
+	"github.com/xmplusdev/xmcore/app/reverse"
+	"github.com/xmplusdev/xmcore/infra/conf"
 )
 
 func TestReverseConfig(t *testing.T) {

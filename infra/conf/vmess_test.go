@@ -3,13 +3,13 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/serial"
-	. "github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/proxy/vmess"
-	"github.com/xcode75/xcore/proxy/vmess/inbound"
-	"github.com/xcode75/xcore/proxy/vmess/outbound"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/serial"
+	. "github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/proxy/vmess"
+	"github.com/xmplusdev/xmcore/proxy/vmess/inbound"
+	"github.com/xmplusdev/xmcore/proxy/vmess/outbound"
 )
 
 func TestVMessOutbound(t *testing.T) {

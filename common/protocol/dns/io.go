@@ -4,9 +4,9 @@ import (
 	"encoding/binary"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/serial"
 	"golang.org/x/net/dns/dnsmessage"
 )
 

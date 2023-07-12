@@ -1,17 +1,17 @@
 package inbound
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 	"sync"
 
-	"github.com/xcode75/xcore/app/proxyman"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/inbound"
+	"github.com/xmplusdev/xmcore/app/proxyman"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/inbound"
 )
 
 // Manager is to manage all inbound handlers.

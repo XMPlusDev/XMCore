@@ -7,7 +7,7 @@
 package http
 
 import (
-	http "github.com/xcode75/xcore/transport/internet/headers/http"
+	http "github.com/xmplusdev/xmcore/transport/internet/headers/http"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

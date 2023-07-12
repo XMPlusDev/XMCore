@@ -4,8 +4,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/platform"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/platform"
 )
 
 type FileReaderFunc func(path string) (io.ReadCloser, error)

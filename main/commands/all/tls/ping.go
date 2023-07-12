@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/xcode75/xcore/main/commands/base"
-	. "github.com/xcode75/xcore/transport/internet/tls"
+	"github.com/xmplusdev/xmcore/main/commands/base"
+	. "github.com/xmplusdev/xmcore/transport/internet/tls"
 )
 
 // cmdPing is the tls ping command

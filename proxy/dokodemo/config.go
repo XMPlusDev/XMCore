@@ -1,7 +1,7 @@
 package dokodemo
 
 import (
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 // GetPredefinedAddress returns the defined address from proto config. Null if address is not valid.

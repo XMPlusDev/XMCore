@@ -3,7 +3,7 @@ package task
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common/signal/semaphore"
+	"github.com/xmplusdev/xmcore/common/signal/semaphore"
 )
 
 // OnSuccess executes g() after f() returns nil.

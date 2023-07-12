@@ -1,6 +1,6 @@
 package encoding
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"bytes"
@@ -13,17 +13,17 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/common/signal"
-	"github.com/xcode75/xcore/features/stats"
-	"github.com/xcode75/xcore/proxy/vless"
-	"github.com/xcode75/xcore/transport/internet/reality"
-	"github.com/xcode75/xcore/transport/internet/stat"
-	"github.com/xcode75/xcore/transport/internet/tls"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/features/stats"
+	"github.com/xmplusdev/xmcore/proxy/vless"
+	"github.com/xmplusdev/xmcore/transport/internet/reality"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/transport/internet/tls"
 )
 
 const (

@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xcode75/xcore/common/log"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/dns/localdns"
+	"github.com/xmplusdev/xmcore/common/log"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/dns/localdns"
 )
 
 // LocalNameServer is an wrapper over local DNS feature.

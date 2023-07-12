@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	. "github.com/xcode75/xcore/transport/internet/headers/tls"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	. "github.com/xmplusdev/xmcore/transport/internet/headers/tls"
 )
 
 func TestDTLSWrite(t *testing.T) {

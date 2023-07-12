@@ -7,15 +7,15 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol/tls/cert"
-	"github.com/xcode75/xcore/testing/servers/tcp"
-	"github.com/xcode75/xcore/transport/internet"
-	. "github.com/xcode75/xcore/transport/internet/http"
-	"github.com/xcode75/xcore/transport/internet/stat"
-	"github.com/xcode75/xcore/transport/internet/tls"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol/tls/cert"
+	"github.com/xmplusdev/xmcore/testing/servers/tcp"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	. "github.com/xmplusdev/xmcore/transport/internet/http"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/transport/internet/tls"
 )
 
 func TestHTTPConnection(t *testing.T) {

@@ -1,7 +1,7 @@
 package pipe
 
 import (
-	"github.com/xcode75/xcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/buf"
 )
 
 // Writer is a buf.Writer that writes data into a pipe.

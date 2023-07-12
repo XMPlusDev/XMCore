@@ -1,11 +1,11 @@
 package quic
 
 import (
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 // Here is some modification needs to be done before update quic vendor.
 // * use bytespool in buffer_pool.go

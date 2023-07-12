@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"context"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/net/cnc"
-	"github.com/xcode75/xcore/features/routing"
-	"github.com/xcode75/xcore/transport/internet/udp"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/net/cnc"
+	"github.com/xmplusdev/xmcore/features/routing"
+	"github.com/xmplusdev/xmcore/transport/internet/udp"
 )
 
 // CreateObject creates a new object based on the given Xray instance and config. The Xray instance may be nil.

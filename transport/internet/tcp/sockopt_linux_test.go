@@ -8,10 +8,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/testing/servers/tcp"
-	"github.com/xcode75/xcore/transport/internet"
-	. "github.com/xcode75/xcore/transport/internet/tcp"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/testing/servers/tcp"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	. "github.com/xmplusdev/xmcore/transport/internet/tcp"
 )
 
 func TestGetOriginalDestination(t *testing.T) {

@@ -9,9 +9,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/signal"
-	"github.com/xcode75/xcore/common/signal/semaphore"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/signal/semaphore"
 )
 
 var (

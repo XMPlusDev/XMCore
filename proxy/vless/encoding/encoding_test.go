@@ -4,13 +4,13 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/uuid"
-	"github.com/xcode75/xcore/proxy/vless"
-	. "github.com/xcode75/xcore/proxy/vless/encoding"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/uuid"
+	"github.com/xmplusdev/xmcore/proxy/vless"
+	. "github.com/xmplusdev/xmcore/proxy/vless/encoding"
 )
 
 func toAccount(a *vless.Account) protocol.Account {

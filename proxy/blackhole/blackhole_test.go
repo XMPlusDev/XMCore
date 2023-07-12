@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/proxy/blackhole"
-	"github.com/xcode75/xcore/transport"
-	"github.com/xcode75/xcore/transport/pipe"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/proxy/blackhole"
+	"github.com/xmplusdev/xmcore/transport"
+	"github.com/xmplusdev/xmcore/transport/pipe"
 )
 
 func TestBlackholeHTTPResponse(t *testing.T) {

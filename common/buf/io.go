@@ -7,8 +7,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/xcode75/xcore/features/stats"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/features/stats"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 // Reader extends io.Reader with MultiBuffer.

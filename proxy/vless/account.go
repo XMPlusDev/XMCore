@@ -1,8 +1,8 @@
 package vless
 
 import (
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/uuid"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/uuid"
 )
 
 // AsAccount implements protocol.Account.AsAccount().

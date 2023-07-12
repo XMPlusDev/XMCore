@@ -1,6 +1,6 @@
 package socks
 
-import "github.com/xcode75/xcore/common/protocol"
+import "github.com/xmplusdev/xmcore/common/protocol"
 
 func (a *Account) Equals(another protocol.Account) bool {
 	if account, ok := another.(*Account); ok {

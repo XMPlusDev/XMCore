@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	. "github.com/xcode75/xcore/transport/internet/headers/http"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	. "github.com/xmplusdev/xmcore/transport/internet/headers/http"
 )
 
 func TestReaderWriter(t *testing.T) {

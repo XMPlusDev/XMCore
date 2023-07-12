@@ -3,17 +3,17 @@ package loopback
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/net/cnc"
-	"github.com/xcode75/xcore/common/retry"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/common/task"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/routing"
-	"github.com/xcode75/xcore/transport"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/net/cnc"
+	"github.com/xmplusdev/xmcore/common/retry"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/common/task"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/routing"
+	"github.com/xmplusdev/xmcore/transport"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 type Loopback struct {

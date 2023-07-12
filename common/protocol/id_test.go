@@ -3,8 +3,8 @@ package protocol_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/uuid"
+	. "github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/uuid"
 )
 
 func TestIdEquals(t *testing.T) {

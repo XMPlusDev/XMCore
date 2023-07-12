@@ -3,8 +3,8 @@ package strmatcher_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	. "github.com/xcode75/xcore/common/strmatcher"
+	"github.com/xmplusdev/xmcore/common"
+	. "github.com/xmplusdev/xmcore/common/strmatcher"
 )
 
 func TestMatcher(t *testing.T) {

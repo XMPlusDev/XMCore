@@ -7,9 +7,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xcode75/xcore/common/dice"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/proxy/vmess/aead"
+	"github.com/xmplusdev/xmcore/common/dice"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/proxy/vmess/aead"
 )
 
 // TimedUserValidator is a user Validator based on time.

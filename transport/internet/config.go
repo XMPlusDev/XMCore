@@ -1,8 +1,8 @@
 package internet
 
 import (
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/features"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/features"
 )
 
 type ConfigCreator func() interface{}

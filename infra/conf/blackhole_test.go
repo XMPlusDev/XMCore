@@ -3,9 +3,9 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common/serial"
-	. "github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/proxy/blackhole"
+	"github.com/xmplusdev/xmcore/common/serial"
+	. "github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/proxy/blackhole"
 )
 
 func TestHTTPResponseJSON(t *testing.T) {

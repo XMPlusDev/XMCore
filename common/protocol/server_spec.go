@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xcode75/xcore/common/dice"
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/common/dice"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 type ValidationStrategy interface {

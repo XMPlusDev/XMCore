@@ -6,8 +6,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	. "github.com/xcode75/xcore/common/platform"
+	"github.com/xmplusdev/xmcore/common"
+	. "github.com/xmplusdev/xmcore/common/platform"
 )
 
 func TestNormalizeEnvName(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xcode75/xcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/protocol"
 )
 
 // Validator stores valid trojan users.

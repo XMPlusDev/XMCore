@@ -3,9 +3,9 @@ package dispatcher_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/app/dispatcher"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
+	. "github.com/xmplusdev/xmcore/app/dispatcher"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
 )
 
 type TestCounter int64

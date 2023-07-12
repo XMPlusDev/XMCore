@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xcode75/xcore/infra/conf/serial"
+	"github.com/xmplusdev/xmcore/infra/conf/serial"
 )
 
 func TestLoaderError(t *testing.T) {

@@ -6,13 +6,13 @@ import (
 	gotls "crypto/tls"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/stat"
-	"github.com/xcode75/xcore/transport/internet/tls"
-	"github.com/xcode75/xcore/transport/internet/udp"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/transport/internet/tls"
+	"github.com/xmplusdev/xmcore/transport/internet/udp"
 )
 
 type ConnectionID struct {

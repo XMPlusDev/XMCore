@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"sort"
 
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 type ipv6 struct {

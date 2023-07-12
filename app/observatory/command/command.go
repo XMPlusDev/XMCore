@@ -6,10 +6,10 @@ package command
 import (
 	"context"
 
-	"github.com/xcode75/xcore/app/observatory"
-	"github.com/xcode75/xcore/common"
-	core "github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/extension"
+	"github.com/xmplusdev/xmcore/app/observatory"
+	"github.com/xmplusdev/xmcore/common"
+	core "github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/extension"
 	"google.golang.org/grpc"
 )
 

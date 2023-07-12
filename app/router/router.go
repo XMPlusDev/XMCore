@@ -1,6 +1,6 @@
 package router
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
@@ -8,12 +8,12 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/outbound"
-	"github.com/xcode75/xcore/features/routing"
-	routing_dns "github.com/xcode75/xcore/features/routing/dns"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/outbound"
+	"github.com/xmplusdev/xmcore/features/routing"
+	routing_dns "github.com/xmplusdev/xmcore/features/routing/dns"
 )
 
 // Router is an implementation of routing.Router.

@@ -8,11 +8,11 @@ import (
 	"crypto/sha1"
 	"io"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/antireplay"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/crypto"
-	"github.com/xcode75/xcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/antireplay"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/crypto"
+	"github.com/xmplusdev/xmcore/common/protocol"
 	"golang.org/x/crypto/chacha20poly1305"
 	"golang.org/x/crypto/hkdf"
 )

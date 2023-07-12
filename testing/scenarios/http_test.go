@@ -11,16 +11,16 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xcode75/xcore/app/proxyman"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/proxy/freedom"
-	v2http "github.com/xcode75/xcore/proxy/http"
-	v2httptest "github.com/xcode75/xcore/testing/servers/http"
-	"github.com/xcode75/xcore/testing/servers/tcp"
+	"github.com/xmplusdev/xmcore/app/proxyman"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/proxy/freedom"
+	v2http "github.com/xmplusdev/xmcore/proxy/http"
+	v2httptest "github.com/xmplusdev/xmcore/testing/servers/http"
+	"github.com/xmplusdev/xmcore/testing/servers/tcp"
 )
 
 func TestHttpConformance(t *testing.T) {

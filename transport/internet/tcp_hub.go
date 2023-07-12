@@ -3,8 +3,8 @@ package internet
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 var transportListenerCache = make(map[string]ListenFunc)

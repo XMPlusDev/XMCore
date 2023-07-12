@@ -2,8 +2,8 @@ package conf
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/proxy/dns"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/proxy/dns"
 )
 
 type DNSOutboundConfig struct {

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	. "github.com/xcode75/xcore/common"
+	. "github.com/xmplusdev/xmcore/common"
 )
 
 func TestMust(t *testing.T) {

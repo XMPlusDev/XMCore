@@ -1,14 +1,14 @@
 // Package session provides functions for sessions of incoming requests.
-package session // import "github.com/xcode75/xcore/common/session"
+package session // import "github.com/xmplusdev/xmcore/common/session"
 
 import (
 	"context"
 	"math/rand"
 
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/signal"
 )
 
 // ID of a session.

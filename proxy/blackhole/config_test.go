@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	. "github.com/xcode75/xcore/proxy/blackhole"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	. "github.com/xmplusdev/xmcore/proxy/blackhole"
 )
 
 func TestHTTPResponse(t *testing.T) {

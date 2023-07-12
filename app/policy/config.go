@@ -3,7 +3,7 @@ package policy
 import (
 	"time"
 
-	"github.com/xcode75/xcore/features/policy"
+	"github.com/xmplusdev/xmcore/features/policy"
 )
 
 // Duration converts Second to time.Duration.

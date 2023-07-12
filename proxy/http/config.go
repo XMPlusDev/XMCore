@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/xcode75/xcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/protocol"
 )
 
 func (a *Account) Equals(another protocol.Account) bool {

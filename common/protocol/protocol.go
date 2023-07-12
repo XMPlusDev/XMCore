@@ -1,3 +1,3 @@
-package protocol // import "github.com/xcode75/xcore/common/protocol"
+package protocol // import "github.com/xmplusdev/xmcore/common/protocol"
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen

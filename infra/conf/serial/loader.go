@@ -7,10 +7,10 @@ import (
 
 	"github.com/ghodss/yaml"
 	"github.com/pelletier/go-toml"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/infra/conf"
-	json_reader "github.com/xcode75/xcore/infra/conf/json"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/infra/conf"
+	json_reader "github.com/xmplusdev/xmcore/infra/conf/json"
 )
 
 type offset struct {

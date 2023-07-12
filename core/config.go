@@ -5,10 +5,10 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/cmdarg"
-	"github.com/xcode75/xcore/main/confloader"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/cmdarg"
+	"github.com/xmplusdev/xmcore/main/confloader"
 )
 
 // ConfigFormat is a configurable format of Xray config file.

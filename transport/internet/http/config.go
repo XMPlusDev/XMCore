@@ -1,9 +1,9 @@
 package http
 
 import (
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/dice"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/dice"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 const protocolName = "http"

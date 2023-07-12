@@ -1,7 +1,7 @@
 package global
 
 import (
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 // Apply applies this Config.

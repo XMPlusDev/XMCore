@@ -4,7 +4,7 @@ import (
 	"container/list"
 	"sync"
 
-	"github.com/xcode75/xcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/buf"
 )
 
 type SendingWindow struct {

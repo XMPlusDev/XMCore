@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"io"
 
-	"github.com/xcode75/xcore/common/dice"
+	"github.com/xmplusdev/xmcore/common/dice"
 )
 
 func (c *Control) FillInRandom() {

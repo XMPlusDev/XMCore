@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/serial"
 )
 
 var _ buf.Writer = (*connection)(nil)

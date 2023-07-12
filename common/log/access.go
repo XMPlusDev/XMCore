@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/serial"
 )
 
 type logKey int

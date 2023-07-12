@@ -1,7 +1,7 @@
 package shadowsocks_2022
 
 import (
-	"github.com/xcode75/xcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/protocol"
 )
 
 // MemoryAccount is an account type converted from Account.

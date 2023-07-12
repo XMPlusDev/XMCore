@@ -1,15 +1,15 @@
 // Package errors is a drop-in replacement for Golang lib 'errors'.
-package errors // import "github.com/xcode75/xcore/common/errors"
+package errors // import "github.com/xmplusdev/xmcore/common/errors"
 
 import (
 	"reflect"
 	"strings"
 
-	"github.com/xcode75/xcore/common/log"
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/log"
+	"github.com/xmplusdev/xmcore/common/serial"
 )
 
-const trim = len("github.com/xcode75/xcore/")
+const trim = len("github.com/xmplusdev/xmcore/")
 
 type hasInnerError interface {
 	// Unwrap returns the underlying error of this one.

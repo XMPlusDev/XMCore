@@ -1,9 +1,9 @@
 package dns
 
 import (
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/strmatcher"
-	"github.com/xcode75/xcore/common/uuid"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/strmatcher"
+	"github.com/xmplusdev/xmcore/common/uuid"
 )
 
 var typeMap = map[DomainMatchingType]strmatcher.Type{

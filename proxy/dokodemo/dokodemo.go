@@ -1,24 +1,24 @@
 package dokodemo
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 	"sync/atomic"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/log"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/common/signal"
-	"github.com/xcode75/xcore/common/task"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/policy"
-	"github.com/xcode75/xcore/features/routing"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/log"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/task"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/policy"
+	"github.com/xmplusdev/xmcore/features/routing"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 func init() {

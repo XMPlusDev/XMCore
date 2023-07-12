@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/xcode75/xcore/common/signal"
+	. "github.com/xmplusdev/xmcore/common/signal"
 )
 
 func TestActivityTimer(t *testing.T) {

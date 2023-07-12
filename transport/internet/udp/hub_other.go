@@ -4,7 +4,7 @@
 package udp
 
 import (
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 func RetrieveOriginalDest(oob []byte) net.Destination {

@@ -7,12 +7,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/xcode75/xcore/app/dispatcher"
-	"github.com/xcode75/xcore/app/proxyman"
-	"github.com/xcode75/xcore/app/stats"
-	"github.com/xcode75/xcore/common/serial"
-	core "github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/app/dispatcher"
+	"github.com/xmplusdev/xmcore/app/proxyman"
+	"github.com/xmplusdev/xmcore/app/stats"
+	"github.com/xmplusdev/xmcore/common/serial"
+	core "github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 var (

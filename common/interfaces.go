@@ -1,6 +1,6 @@
 package common
 
-import "github.com/xcode75/xcore/common/errors"
+import "github.com/xmplusdev/xmcore/common/errors"
 
 // Closable is the interface for objects that can release its resources.
 //

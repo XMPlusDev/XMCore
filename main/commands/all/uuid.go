@@ -3,8 +3,8 @@ package all
 import (
 	"fmt"
 
-	"github.com/xcode75/xcore/common/uuid"
-	"github.com/xcode75/xcore/main/commands/base"
+	"github.com/xmplusdev/xmcore/common/uuid"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 var cmdUUID = &base.Command{

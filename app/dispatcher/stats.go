@@ -1,9 +1,9 @@
 package dispatcher
 
 import (
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/features/stats"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/features/stats"
 )
 
 type SizeStatWriter struct {

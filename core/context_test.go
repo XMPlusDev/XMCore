@@ -5,7 +5,7 @@ import (
 	"testing"
 	_ "unsafe"
 
-	. "github.com/xcode75/xcore/core"
+	. "github.com/xmplusdev/xmcore/core"
 )
 
 func TestFromContextPanic(t *testing.T) {

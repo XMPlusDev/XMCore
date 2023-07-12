@@ -10,11 +10,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/infra/conf/serial"
-	"github.com/xcode75/xcore/main/commands/base"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/infra/conf/serial"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 	"google.golang.org/protobuf/proto"
 )
 

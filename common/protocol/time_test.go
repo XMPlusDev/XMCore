@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/xcode75/xcore/common/protocol"
+	. "github.com/xmplusdev/xmcore/common/protocol"
 )
 
 func TestGenerateRandomInt64InRange(t *testing.T) {

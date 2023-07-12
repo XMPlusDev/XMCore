@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/xcode75/xcore/app/dns"
-	"github.com/xcode75/xcore/app/router"
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/app/dns"
+	"github.com/xmplusdev/xmcore/app/router"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 type NameServerConfig struct {

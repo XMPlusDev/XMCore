@@ -5,10 +5,10 @@ import (
 	"crypto/rand"
 	"io"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/bytespool"
-	"github.com/xcode75/xcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/bytespool"
+	"github.com/xmplusdev/xmcore/common/protocol"
 )
 
 type BytesGenerator func() []byte

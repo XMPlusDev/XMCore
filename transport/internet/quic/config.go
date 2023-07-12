@@ -5,9 +5,9 @@ import (
 	"crypto/cipher"
 	"crypto/sha256"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/transport/internet"
 	"golang.org/x/crypto/chacha20poly1305"
 )
 

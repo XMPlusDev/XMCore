@@ -13,7 +13,7 @@ import (
 	"os"
 
 	"github.com/sagernet/wireguard-go/tun"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/dns"
 	"gvisor.dev/gvisor/pkg/bufferv2"
 	"gvisor.dev/gvisor/pkg/tcpip"
 	"gvisor.dev/gvisor/pkg/tcpip/adapters/gonet"

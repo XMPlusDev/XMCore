@@ -7,8 +7,8 @@ import (
 	"io"
 	"syscall"
 
-	"github.com/xcode75/xcore/common/platform"
-	"github.com/xcode75/xcore/features/stats"
+	"github.com/xmplusdev/xmcore/common/platform"
+	"github.com/xmplusdev/xmcore/features/stats"
 )
 
 type allocStrategy struct {

@@ -4,15 +4,15 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xcode75/xcore/app/policy"
-	. "github.com/xcode75/xcore/app/proxyman/outbound"
-	"github.com/xcode75/xcore/app/stats"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/serial"
-	core "github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/outbound"
-	"github.com/xcode75/xcore/proxy/freedom"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/app/policy"
+	. "github.com/xmplusdev/xmcore/app/proxyman/outbound"
+	"github.com/xmplusdev/xmcore/app/stats"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/serial"
+	core "github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/outbound"
+	"github.com/xmplusdev/xmcore/proxy/freedom"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 func TestInterfaces(t *testing.T) {

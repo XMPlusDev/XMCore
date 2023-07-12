@@ -12,12 +12,12 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/stat"
-	"github.com/xcode75/xcore/transport/internet/tls"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/transport/internet/tls"
 )
 
 //go:embed dialer.html

@@ -1,4 +1,4 @@
-package uuid // import "github.com/xcode75/xcore/common/uuid"
+package uuid // import "github.com/xmplusdev/xmcore/common/uuid"
 
 import (
 	"bytes"
@@ -6,8 +6,8 @@ import (
 	"crypto/sha1"
 	"encoding/hex"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/errors"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/errors"
 )
 
 var byteGroups = []int{8, 4, 4, 4, 12}

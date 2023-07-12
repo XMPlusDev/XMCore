@@ -3,7 +3,7 @@ package http_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/common/protocol/http"
+	. "github.com/xmplusdev/xmcore/common/protocol/http"
 )
 
 func TestHTTPHeaders(t *testing.T) {

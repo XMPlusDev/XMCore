@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"github.com/xcode75/xcore/app/policy"
+	"github.com/xmplusdev/xmcore/app/policy"
 )
 
 type Policy struct {

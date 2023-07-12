@@ -3,11 +3,11 @@ package command
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/inbound"
-	"github.com/xcode75/xcore/features/outbound"
-	"github.com/xcode75/xcore/proxy"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/inbound"
+	"github.com/xmplusdev/xmcore/features/outbound"
+	"github.com/xmplusdev/xmcore/proxy"
 	grpc "google.golang.org/grpc"
 )
 

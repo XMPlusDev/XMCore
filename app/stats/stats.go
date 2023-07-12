@@ -1,14 +1,14 @@
 package stats
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/features/stats"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/features/stats"
 )
 
 // Manager is an implementation of stats.Manager.

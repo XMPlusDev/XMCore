@@ -5,8 +5,8 @@ import (
 	"encoding/hex"
 	fmt "fmt"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/protocol"
 )
 
 // MemoryAccount is an account type converted from Account.

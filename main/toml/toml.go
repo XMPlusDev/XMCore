@@ -3,12 +3,12 @@ package toml
 import (
 	"io"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/cmdarg"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/infra/conf/serial"
-	"github.com/xcode75/xcore/main/confloader"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/cmdarg"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/infra/conf/serial"
+	"github.com/xmplusdev/xmcore/main/confloader"
 )
 
 func init() {

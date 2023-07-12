@@ -3,9 +3,9 @@ package router
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common/dice"
-	"github.com/xcode75/xcore/features/extension"
-	"github.com/xcode75/xcore/features/outbound"
+	"github.com/xmplusdev/xmcore/common/dice"
+	"github.com/xmplusdev/xmcore/features/extension"
+	"github.com/xmplusdev/xmcore/features/outbound"
 )
 
 type BalancingStrategy interface {

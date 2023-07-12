@@ -1,10 +1,10 @@
 package dns
 
 import (
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/features"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/features"
 )
 
 // IPOption is an object for IP query options.

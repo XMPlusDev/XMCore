@@ -3,9 +3,9 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common/net"
-	. "github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/proxy/dokodemo"
+	"github.com/xmplusdev/xmcore/common/net"
+	. "github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/proxy/dokodemo"
 )
 
 func TestDokodemoConfig(t *testing.T) {

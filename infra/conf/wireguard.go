@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/proxy/wireguard"
+	"github.com/xmplusdev/xmcore/proxy/wireguard"
 )
 
 type WireGuardPeerConfig struct {

@@ -3,8 +3,8 @@ package conf
 import (
 	"strings"
 
-	"github.com/xcode75/xcore/app/log"
-	clog "github.com/xcode75/xcore/common/log"
+	"github.com/xmplusdev/xmcore/app/log"
+	clog "github.com/xmplusdev/xmcore/common/log"
 )
 
 func DefaultLogConfig() *log.Config {

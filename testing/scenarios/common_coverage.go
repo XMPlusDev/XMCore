@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/xcode75/xcore/common/uuid"
+	"github.com/xmplusdev/xmcore/common/uuid"
 )
 
 func BuildXray() error {
@@ -17,7 +17,7 @@ func BuildXray() error {
 		return nil
 	}
 
-	cmd := exec.Command("go", "test", "-tags", "coverage coveragemain", "-coverpkg", "github.com/xcode75/xcore/...", "-c", "-o", testBinaryPath, GetSourcePath())
+	cmd := exec.Command("go", "test", "-tags", "coverage coveragemain", "-coverpkg", "github.com/xmplusdev/xmcore/...", "-c", "-o", testBinaryPath, GetSourcePath())
 	return cmd.Run()
 }
 

@@ -4,8 +4,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/signal"
 )
 
 type dataHandler func(MultiBuffer)

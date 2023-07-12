@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/sagernet/sing/common/uot"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 func (h *Handler) getUoTConnection(ctx context.Context, dest net.Destination) (stat.Connection, error) {

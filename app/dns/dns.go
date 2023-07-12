@@ -1,7 +1,7 @@
 // Package dns is an implementation of core.DNS feature.
 package dns
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
@@ -9,14 +9,14 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/xcode75/xcore/app/router"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/common/strmatcher"
-	"github.com/xcode75/xcore/features"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/app/router"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/common/strmatcher"
+	"github.com/xmplusdev/xmcore/features"
+	"github.com/xmplusdev/xmcore/features/dns"
 )
 
 // DNS is a DNS rely server.

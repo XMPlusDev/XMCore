@@ -5,14 +5,14 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	. "github.com/xcode75/xcore/app/router"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/outbound"
-	routing_session "github.com/xcode75/xcore/features/routing/session"
-	"github.com/xcode75/xcore/testing/mocks"
+	. "github.com/xmplusdev/xmcore/app/router"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/outbound"
+	routing_session "github.com/xmplusdev/xmcore/features/routing/session"
+	"github.com/xmplusdev/xmcore/testing/mocks"
 )
 
 type mockOutboundManager struct {

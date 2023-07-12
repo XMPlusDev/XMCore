@@ -3,10 +3,10 @@ package mux_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/mux"
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/mux"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 func BenchmarkFrameWrite(b *testing.B) {

@@ -1,7 +1,7 @@
 package api
 
 import (
-	"github.com/xcode75/xcore/main/commands/base"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 // CmdAPI calls an API in an Xray process

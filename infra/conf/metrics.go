@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"github.com/xcode75/xcore/app/metrics"
+	"github.com/xmplusdev/xmcore/app/metrics"
 )
 
 type MetricsConfig struct {

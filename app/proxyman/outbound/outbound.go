@@ -1,17 +1,17 @@
 package outbound
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 	"strings"
 	"sync"
 
-	"github.com/xcode75/xcore/app/proxyman"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/outbound"
+	"github.com/xmplusdev/xmcore/app/proxyman"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/outbound"
 )
 
 // Manager is to manage all outbound handlers.

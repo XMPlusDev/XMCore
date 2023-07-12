@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/common"
 )
 
 // Channel is an implementation of stats.Channel.

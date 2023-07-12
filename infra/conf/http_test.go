@@ -3,8 +3,8 @@ package conf_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/proxy/http"
+	. "github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/proxy/http"
 )
 
 func TestHTTPServerConfig(t *testing.T) {

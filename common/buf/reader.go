@@ -3,8 +3,8 @@ package buf
 import (
 	"io"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/errors"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/errors"
 )
 
 func readOneUDP(r io.Reader) (*Buffer, error) {

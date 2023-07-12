@@ -5,8 +5,8 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/xcode75/xcore/common/platform"
-	"github.com/xcode75/xcore/features"
+	"github.com/xmplusdev/xmcore/common/platform"
+	"github.com/xmplusdev/xmcore/features"
 )
 
 // Timeout contains limits for connection timeout.

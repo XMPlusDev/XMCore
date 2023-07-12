@@ -4,9 +4,9 @@
 package tcp
 
 import (
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 // GetOriginalDestination from tcp conn

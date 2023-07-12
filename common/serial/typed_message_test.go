@@ -3,7 +3,7 @@ package serial_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/common/serial"
+	. "github.com/xmplusdev/xmcore/common/serial"
 )
 
 func TestGetInstance(t *testing.T) {

@@ -3,7 +3,7 @@ package wireguard
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/common"
 )
 
 type Wireguard struct{}

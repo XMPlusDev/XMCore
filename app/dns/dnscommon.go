@@ -6,13 +6,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/log"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/core"
-	dns_feature "github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/log"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/core"
+	dns_feature "github.com/xmplusdev/xmcore/features/dns"
 	"golang.org/x/net/dns/dnsmessage"
 )
 

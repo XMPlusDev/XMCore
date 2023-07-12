@@ -1,8 +1,8 @@
 package api
 
 import (
-	statsService "github.com/xcode75/xcore/app/stats/command"
-	"github.com/xcode75/xcore/main/commands/base"
+	statsService "github.com/xmplusdev/xmcore/app/stats/command"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 var cmdQueryStats = &base.Command{

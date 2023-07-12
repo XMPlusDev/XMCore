@@ -3,10 +3,10 @@ package pipe
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/signal"
-	"github.com/xcode75/xcore/common/signal/done"
-	"github.com/xcode75/xcore/features/policy"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/signal/done"
+	"github.com/xmplusdev/xmcore/features/policy"
 )
 
 // Option for creating new Pipes.

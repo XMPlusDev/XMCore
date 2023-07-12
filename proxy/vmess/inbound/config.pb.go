@@ -7,7 +7,7 @@
 package inbound
 
 import (
-	protocol "github.com/xcode75/xcore/common/protocol"
+	protocol "github.com/xmplusdev/xmcore/common/protocol"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

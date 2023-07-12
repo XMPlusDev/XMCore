@@ -1,12 +1,12 @@
 package stats
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/features"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/features"
 )
 
 // Counter is the interface for stats counters.

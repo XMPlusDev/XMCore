@@ -5,7 +5,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"github.com/xcode75/xcore/main/commands/base"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 	"golang.org/x/crypto/curve25519"
 )
 

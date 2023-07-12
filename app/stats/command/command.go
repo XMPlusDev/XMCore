@@ -1,17 +1,17 @@
 package command
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 	"runtime"
 	"time"
 
-	"github.com/xcode75/xcore/app/stats"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/strmatcher"
-	"github.com/xcode75/xcore/core"
-	feature_stats "github.com/xcode75/xcore/features/stats"
+	"github.com/xmplusdev/xmcore/app/stats"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/strmatcher"
+	"github.com/xmplusdev/xmcore/core"
+	feature_stats "github.com/xmplusdev/xmcore/features/stats"
 	grpc "google.golang.org/grpc"
 )
 

@@ -3,7 +3,7 @@ package kcp_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/transport/internet/kcp"
+	. "github.com/xmplusdev/xmcore/transport/internet/kcp"
 )
 
 func TestKCPPacketReader(t *testing.T) {

@@ -4,80 +4,80 @@ import (
 	// The following are necessary as they register handlers in their init functions.
 
 	// Mandatory features. Can't remove unless there are replacements.
-	_ "github.com/xcode75/xcore/app/dispatcher"
-	_ "github.com/xcode75/xcore/app/proxyman/inbound"
-	_ "github.com/xcode75/xcore/app/proxyman/outbound"
+	_ "github.com/xmplusdev/xmcore/app/dispatcher"
+	_ "github.com/xmplusdev/xmcore/app/proxyman/inbound"
+	_ "github.com/xmplusdev/xmcore/app/proxyman/outbound"
 
 	// Default commander and all its services. This is an optional feature.
-	_ "github.com/xcode75/xcore/app/commander"
-	_ "github.com/xcode75/xcore/app/log/command"
-	_ "github.com/xcode75/xcore/app/proxyman/command"
-	_ "github.com/xcode75/xcore/app/stats/command"
+	_ "github.com/xmplusdev/xmcore/app/commander"
+	_ "github.com/xmplusdev/xmcore/app/log/command"
+	_ "github.com/xmplusdev/xmcore/app/proxyman/command"
+	_ "github.com/xmplusdev/xmcore/app/stats/command"
 
 	// Developer preview services
-	_ "github.com/xcode75/xcore/app/observatory/command"
+	_ "github.com/xmplusdev/xmcore/app/observatory/command"
 
 	// Other optional features.
-	_ "github.com/xcode75/xcore/app/dns"
-	_ "github.com/xcode75/xcore/app/dns/fakedns"
-	_ "github.com/xcode75/xcore/app/log"
-	_ "github.com/xcode75/xcore/app/metrics"
-	_ "github.com/xcode75/xcore/app/policy"
-	_ "github.com/xcode75/xcore/app/reverse"
-	_ "github.com/xcode75/xcore/app/router"
-	_ "github.com/xcode75/xcore/app/stats"
+	_ "github.com/xmplusdev/xmcore/app/dns"
+	_ "github.com/xmplusdev/xmcore/app/dns/fakedns"
+	_ "github.com/xmplusdev/xmcore/app/log"
+	_ "github.com/xmplusdev/xmcore/app/metrics"
+	_ "github.com/xmplusdev/xmcore/app/policy"
+	_ "github.com/xmplusdev/xmcore/app/reverse"
+	_ "github.com/xmplusdev/xmcore/app/router"
+	_ "github.com/xmplusdev/xmcore/app/stats"
 
 	// Fix dependency cycle caused by core import in internet package
-	_ "github.com/xcode75/xcore/transport/internet/tagged/taggedimpl"
+	_ "github.com/xmplusdev/xmcore/transport/internet/tagged/taggedimpl"
 
 	// Developer preview features
-	_ "github.com/xcode75/xcore/app/observatory"
+	_ "github.com/xmplusdev/xmcore/app/observatory"
 
 	// Inbound and outbound proxies.
-	_ "github.com/xcode75/xcore/proxy/blackhole"
-	_ "github.com/xcode75/xcore/proxy/dns"
-	_ "github.com/xcode75/xcore/proxy/dokodemo"
-	_ "github.com/xcode75/xcore/proxy/freedom"
-	_ "github.com/xcode75/xcore/proxy/http"
-	_ "github.com/xcode75/xcore/proxy/loopback"
-	_ "github.com/xcode75/xcore/proxy/shadowsocks"
-	_ "github.com/xcode75/xcore/proxy/socks"
-	_ "github.com/xcode75/xcore/proxy/trojan"
-	_ "github.com/xcode75/xcore/proxy/vless/inbound"
-	_ "github.com/xcode75/xcore/proxy/vless/outbound"
-	_ "github.com/xcode75/xcore/proxy/vmess/inbound"
-	_ "github.com/xcode75/xcore/proxy/vmess/outbound"
-	_ "github.com/xcode75/xcore/proxy/wireguard"
+	_ "github.com/xmplusdev/xmcore/proxy/blackhole"
+	_ "github.com/xmplusdev/xmcore/proxy/dns"
+	_ "github.com/xmplusdev/xmcore/proxy/dokodemo"
+	_ "github.com/xmplusdev/xmcore/proxy/freedom"
+	_ "github.com/xmplusdev/xmcore/proxy/http"
+	_ "github.com/xmplusdev/xmcore/proxy/loopback"
+	_ "github.com/xmplusdev/xmcore/proxy/shadowsocks"
+	_ "github.com/xmplusdev/xmcore/proxy/socks"
+	_ "github.com/xmplusdev/xmcore/proxy/trojan"
+	_ "github.com/xmplusdev/xmcore/proxy/vless/inbound"
+	_ "github.com/xmplusdev/xmcore/proxy/vless/outbound"
+	_ "github.com/xmplusdev/xmcore/proxy/vmess/inbound"
+	_ "github.com/xmplusdev/xmcore/proxy/vmess/outbound"
+	_ "github.com/xmplusdev/xmcore/proxy/wireguard"
 
 	// Transports
-	_ "github.com/xcode75/xcore/transport/internet/domainsocket"
-	_ "github.com/xcode75/xcore/transport/internet/grpc"
-	_ "github.com/xcode75/xcore/transport/internet/http"
-	_ "github.com/xcode75/xcore/transport/internet/kcp"
-	_ "github.com/xcode75/xcore/transport/internet/quic"
-	_ "github.com/xcode75/xcore/transport/internet/reality"
-	_ "github.com/xcode75/xcore/transport/internet/tcp"
-	_ "github.com/xcode75/xcore/transport/internet/tls"
-	_ "github.com/xcode75/xcore/transport/internet/udp"
-	_ "github.com/xcode75/xcore/transport/internet/websocket"
+	_ "github.com/xmplusdev/xmcore/transport/internet/domainsocket"
+	_ "github.com/xmplusdev/xmcore/transport/internet/grpc"
+	_ "github.com/xmplusdev/xmcore/transport/internet/http"
+	_ "github.com/xmplusdev/xmcore/transport/internet/kcp"
+	_ "github.com/xmplusdev/xmcore/transport/internet/quic"
+	_ "github.com/xmplusdev/xmcore/transport/internet/reality"
+	_ "github.com/xmplusdev/xmcore/transport/internet/tcp"
+	_ "github.com/xmplusdev/xmcore/transport/internet/tls"
+	_ "github.com/xmplusdev/xmcore/transport/internet/udp"
+	_ "github.com/xmplusdev/xmcore/transport/internet/websocket"
 
 	// Transport headers
-	_ "github.com/xcode75/xcore/transport/internet/headers/http"
-	_ "github.com/xcode75/xcore/transport/internet/headers/noop"
-	_ "github.com/xcode75/xcore/transport/internet/headers/srtp"
-	_ "github.com/xcode75/xcore/transport/internet/headers/tls"
-	_ "github.com/xcode75/xcore/transport/internet/headers/utp"
-	_ "github.com/xcode75/xcore/transport/internet/headers/wechat"
-	_ "github.com/xcode75/xcore/transport/internet/headers/wireguard"
+	_ "github.com/xmplusdev/xmcore/transport/internet/headers/http"
+	_ "github.com/xmplusdev/xmcore/transport/internet/headers/noop"
+	_ "github.com/xmplusdev/xmcore/transport/internet/headers/srtp"
+	_ "github.com/xmplusdev/xmcore/transport/internet/headers/tls"
+	_ "github.com/xmplusdev/xmcore/transport/internet/headers/utp"
+	_ "github.com/xmplusdev/xmcore/transport/internet/headers/wechat"
+	_ "github.com/xmplusdev/xmcore/transport/internet/headers/wireguard"
 
 	// JSON & TOML & YAML
-	_ "github.com/xcode75/xcore/main/json"
-	_ "github.com/xcode75/xcore/main/toml"
-	_ "github.com/xcode75/xcore/main/yaml"
+	_ "github.com/xmplusdev/xmcore/main/json"
+	_ "github.com/xmplusdev/xmcore/main/toml"
+	_ "github.com/xmplusdev/xmcore/main/yaml"
 
 	// Load config from file or http(s)
-	_ "github.com/xcode75/xcore/main/confloader/external"
+	_ "github.com/xmplusdev/xmcore/main/confloader/external"
 
 	// Commands
-	_ "github.com/xcode75/xcore/main/commands/all"
+	_ "github.com/xmplusdev/xmcore/main/commands/all"
 )

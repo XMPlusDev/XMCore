@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/testing/servers/tcp"
-	. "github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/testing/servers/tcp"
+	. "github.com/xmplusdev/xmcore/transport/internet"
 )
 
 func TestTCPFastOpen(t *testing.T) {

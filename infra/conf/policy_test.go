@@ -3,8 +3,8 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	. "github.com/xcode75/xcore/infra/conf"
+	"github.com/xmplusdev/xmcore/common"
+	. "github.com/xmplusdev/xmcore/infra/conf"
 )
 
 func TestBufferSize(t *testing.T) {

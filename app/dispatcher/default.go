@@ -1,6 +1,6 @@
 package dispatcher
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
@@ -9,21 +9,21 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/log"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/outbound"
-	"github.com/xcode75/xcore/features/policy"
-	"github.com/xcode75/xcore/features/routing"
-	routing_session "github.com/xcode75/xcore/features/routing/session"
-	"github.com/xcode75/xcore/features/stats"
-	"github.com/xcode75/xcore/transport"
-	"github.com/xcode75/xcore/transport/pipe"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/log"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/outbound"
+	"github.com/xmplusdev/xmcore/features/policy"
+	"github.com/xmplusdev/xmcore/features/routing"
+	routing_session "github.com/xmplusdev/xmcore/features/routing/session"
+	"github.com/xmplusdev/xmcore/features/stats"
+	"github.com/xmplusdev/xmcore/transport"
+	"github.com/xmplusdev/xmcore/transport/pipe"
 )
 
 var errSniffingTimeout = newError("timeout on sniffing")

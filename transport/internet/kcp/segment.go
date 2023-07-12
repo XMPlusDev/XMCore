@@ -3,7 +3,7 @@ package kcp
 import (
 	"encoding/binary"
 
-	"github.com/xcode75/xcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/buf"
 )
 
 // Command is a KCP command that indicate the purpose of a Segment.

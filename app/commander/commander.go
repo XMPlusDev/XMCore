@@ -1,16 +1,16 @@
 package commander
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 	"net"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/signal/done"
-	core "github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/outbound"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/signal/done"
+	core "github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/outbound"
 	"google.golang.org/grpc"
 )
 

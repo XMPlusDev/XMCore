@@ -4,11 +4,11 @@ import (
 	"context"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/net/cnc"
-	"github.com/xcode75/xcore/common/signal/done"
-	"github.com/xcode75/xcore/transport"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/net/cnc"
+	"github.com/xmplusdev/xmcore/common/signal/done"
+	"github.com/xmplusdev/xmcore/transport"
 )
 
 // OutboundListener is a net.Listener for listening metrics http connections.

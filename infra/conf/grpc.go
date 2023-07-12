@@ -2,7 +2,7 @@ package conf
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/transport/internet/grpc"
+	"github.com/xmplusdev/xmcore/transport/internet/grpc"
 )
 
 type GRPCConfig struct {

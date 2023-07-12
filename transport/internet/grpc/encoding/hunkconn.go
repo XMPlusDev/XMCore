@@ -5,10 +5,10 @@ import (
 	"io"
 	"net"
 
-	"github.com/xcode75/xcore/common/buf"
-	xnet "github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/net/cnc"
-	"github.com/xcode75/xcore/common/signal/done"
+	"github.com/xmplusdev/xmcore/common/buf"
+	xnet "github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/net/cnc"
+	"github.com/xmplusdev/xmcore/common/signal/done"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/peer"
 )

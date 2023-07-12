@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/cache"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/cache"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/dns"
 )
 
 type Holder struct {

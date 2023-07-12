@@ -7,7 +7,7 @@
 package dokodemo
 
 import (
-	net "github.com/xcode75/xcore/common/net"
+	net "github.com/xmplusdev/xmcore/common/net"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

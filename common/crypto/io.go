@@ -4,7 +4,7 @@ import (
 	"crypto/cipher"
 	"io"
 
-	"github.com/xcode75/xcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/buf"
 )
 
 type CryptionReader struct {

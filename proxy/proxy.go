@@ -8,12 +8,12 @@ package proxy
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/features/routing"
-	"github.com/xcode75/xcore/transport"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/features/routing"
+	"github.com/xmplusdev/xmcore/transport"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 // An Inbound processes inbound connections.

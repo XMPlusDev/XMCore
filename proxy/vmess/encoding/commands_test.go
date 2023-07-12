@@ -5,11 +5,11 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/assert"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/uuid"
-	. "github.com/xcode75/xcore/proxy/vmess/encoding"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/uuid"
+	. "github.com/xmplusdev/xmcore/proxy/vmess/encoding"
 )
 
 func TestSwitchAccount(t *testing.T) {

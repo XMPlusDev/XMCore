@@ -3,13 +3,13 @@ package conf
 import (
 	"strings"
 
-	"github.com/xcode75/xcore/app/commander"
-	loggerservice "github.com/xcode75/xcore/app/log/command"
-	observatoryservice "github.com/xcode75/xcore/app/observatory/command"
-	handlerservice "github.com/xcode75/xcore/app/proxyman/command"
-	statsservice "github.com/xcode75/xcore/app/stats/command"
-	ruleservice "github.com/xcode75/xcore/app/router/command"
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/app/commander"
+	loggerservice "github.com/xmplusdev/xmcore/app/log/command"
+	observatoryservice "github.com/xmplusdev/xmcore/app/observatory/command"
+	handlerservice "github.com/xmplusdev/xmcore/app/proxyman/command"
+	statsservice "github.com/xmplusdev/xmcore/app/stats/command"
+	ruleservice "github.com/xmplusdev/xmcore/app/router/command"
+	"github.com/xmplusdev/xmcore/common/serial"
 )
 
 type APIConfig struct {

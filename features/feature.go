@@ -1,8 +1,8 @@
 package features
 
-import "github.com/xcode75/xcore/common"
+import "github.com/xmplusdev/xmcore/common"
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 // Feature is the interface for Xray features. All features must implement this interface.
 // All existing features have an implementation in app directory. These features can be replaced by third-party ones.

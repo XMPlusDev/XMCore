@@ -5,10 +5,10 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/testing/servers/tcp"
-	. "github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/testing/servers/tcp"
+	. "github.com/xmplusdev/xmcore/transport/internet"
 )
 
 func TestSockOptMark(t *testing.T) {

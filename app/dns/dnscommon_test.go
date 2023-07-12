@@ -7,9 +7,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/miekg/dns"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	dns_feature "github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	dns_feature "github.com/xmplusdev/xmcore/features/dns"
 	"golang.org/x/net/dns/dnsmessage"
 )
 

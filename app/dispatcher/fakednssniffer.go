@@ -4,11 +4,11 @@ import (
 	"context"
 	"strings"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/dns"
 )
 
 // newFakeDNSSniffer Creates a Fake DNS metadata sniffer

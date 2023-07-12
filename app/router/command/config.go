@@ -3,8 +3,8 @@ package command
 import (
 	"strings"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/routing"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/routing"
 )
 
 // routingContext is an wrapper of protobuf RoutingContext as implementation of routing.Context and routing.Route.

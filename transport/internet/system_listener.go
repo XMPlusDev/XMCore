@@ -11,8 +11,8 @@ import (
 
 	"github.com/pires/go-proxyproto"
 	"github.com/sagernet/sing/common/control"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/session"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/session"
 )
 
 var effectiveListener = DefaultListener{}

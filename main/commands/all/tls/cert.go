@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/protocol/tls/cert"
-	"github.com/xcode75/xcore/common/task"
-	"github.com/xcode75/xcore/main/commands/base"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/protocol/tls/cert"
+	"github.com/xmplusdev/xmcore/common/task"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 // cmdCert is the tls cert command

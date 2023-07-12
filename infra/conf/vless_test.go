@@ -3,13 +3,13 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/serial"
-	. "github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/proxy/vless"
-	"github.com/xcode75/xcore/proxy/vless/inbound"
-	"github.com/xcode75/xcore/proxy/vless/outbound"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/serial"
+	. "github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/proxy/vless"
+	"github.com/xmplusdev/xmcore/proxy/vless/inbound"
+	"github.com/xmplusdev/xmcore/proxy/vless/outbound"
 )
 
 func TestVLessOutbound(t *testing.T) {

@@ -3,7 +3,7 @@ package stat
 import (
 	"net"
 
-	"github.com/xcode75/xcore/features/stats"
+	"github.com/xmplusdev/xmcore/features/stats"
 )
 
 type Connection interface {

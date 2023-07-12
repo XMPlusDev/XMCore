@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	. "github.com/xcode75/xcore/common/strmatcher"
+	. "github.com/xmplusdev/xmcore/common/strmatcher"
 )
 
 func TestFullMatcherGroup(t *testing.T) {

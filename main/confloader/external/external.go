@@ -1,6 +1,6 @@
 package external
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"bytes"
@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/platform/ctlcmd"
-	"github.com/xcode75/xcore/main/confloader"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/platform/ctlcmd"
+	"github.com/xmplusdev/xmcore/main/confloader"
 )
 
 func ConfigLoader(arg string) (out io.Reader, err error) {

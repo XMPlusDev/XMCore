@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/xtls/reality"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 func (c *Config) GetREALITYConfig() *reality.Config {

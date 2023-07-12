@@ -3,8 +3,8 @@ package vmess
 import (
 	"strings"
 
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/uuid"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/uuid"
 )
 
 // MemoryAccount is an in-memory form of VMess account.

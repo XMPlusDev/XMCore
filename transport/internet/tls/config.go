@@ -9,11 +9,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/ocsp"
-	"github.com/xcode75/xcore/common/platform/filesystem"
-	"github.com/xcode75/xcore/common/protocol/tls/cert"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/ocsp"
+	"github.com/xmplusdev/xmcore/common/platform/filesystem"
+	"github.com/xmplusdev/xmcore/common/protocol/tls/cert"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 var globalSessionCache = tls.NewLRUClientSessionCache(128)

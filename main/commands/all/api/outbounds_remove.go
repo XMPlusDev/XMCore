@@ -3,9 +3,9 @@ package api
 import (
 	"fmt"
 
-	handlerService "github.com/xcode75/xcore/app/proxyman/command"
-	"github.com/xcode75/xcore/infra/conf/serial"
-	"github.com/xcode75/xcore/main/commands/base"
+	handlerService "github.com/xmplusdev/xmcore/app/proxyman/command"
+	"github.com/xmplusdev/xmcore/infra/conf/serial"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 var cmdRemoveOutbounds = &base.Command{

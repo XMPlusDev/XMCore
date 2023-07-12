@@ -4,7 +4,7 @@ import (
 	"crypto/cipher"
 	"testing"
 
-	. "github.com/xcode75/xcore/common/crypto"
+	. "github.com/xmplusdev/xmcore/common/crypto"
 )
 
 const benchSize = 1024 * 1024

@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/xcode75/xcore/app/log"
-	"github.com/xcode75/xcore/common"
-	clog "github.com/xcode75/xcore/common/log"
-	"github.com/xcode75/xcore/testing/mocks"
+	"github.com/xmplusdev/xmcore/app/log"
+	"github.com/xmplusdev/xmcore/common"
+	clog "github.com/xmplusdev/xmcore/common/log"
+	"github.com/xmplusdev/xmcore/testing/mocks"
 )
 
 func TestCustomLogHandler(t *testing.T) {

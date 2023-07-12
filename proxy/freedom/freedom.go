@@ -1,6 +1,6 @@
 package freedom
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
@@ -9,21 +9,21 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/dice"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/retry"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/common/signal"
-	"github.com/xcode75/xcore/common/task"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/policy"
-	"github.com/xcode75/xcore/features/stats"
-	"github.com/xcode75/xcore/transport"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/dice"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/retry"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/task"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/policy"
+	"github.com/xmplusdev/xmcore/features/stats"
+	"github.com/xmplusdev/xmcore/transport"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 func init() {
@@ -401,7 +401,7 @@ func (f *FragmentWriter) Write(b []byte) (int, error) {
 	}
 }
 
-// stolen from github.com/xcode75/xcore/transport/internet/reality
+// stolen from github.com/xmplusdev/xmcore/transport/internet/reality
 func randBetween(left int64, right int64) int64 {
 	if left == right {
 		return left

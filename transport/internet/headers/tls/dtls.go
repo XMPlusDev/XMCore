@@ -3,8 +3,8 @@ package tls
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/dice"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/dice"
 )
 
 // DTLS writes header as DTLS. See https://tools.ietf.org/html/rfc6347

@@ -5,7 +5,7 @@ import (
 	"encoding/binary"
 	"hash/fnv"
 
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/common"
 )
 
 // SimpleAuthenticator is a legacy AEAD used for KCP encryption.

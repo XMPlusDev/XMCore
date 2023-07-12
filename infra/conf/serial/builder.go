@@ -3,9 +3,9 @@ package serial
 import (
 	"io"
 
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/main/confloader"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/main/confloader"
 )
 
 func BuildConfig(files []string, formats []string) (*core.Config, error) {

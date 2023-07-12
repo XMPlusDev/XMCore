@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/main/commands/base"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 var cmdVersion = &base.Command{

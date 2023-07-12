@@ -3,9 +3,9 @@ package protocol
 import (
 	"runtime"
 
-	"github.com/xcode75/xcore/common/bitmask"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/uuid"
+	"github.com/xmplusdev/xmcore/common/bitmask"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/uuid"
 	"golang.org/x/sys/cpu"
 )
 

@@ -1,8 +1,8 @@
 package tcp
 
 import (
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 // PickPort returns an unused TCP port in the system. The port returned is highly likely to be unused, but not guaranteed.

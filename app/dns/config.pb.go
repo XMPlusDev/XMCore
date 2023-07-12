@@ -7,8 +7,8 @@
 package dns
 
 import (
-	router "github.com/xcode75/xcore/app/router"
-	net "github.com/xcode75/xcore/common/net"
+	router "github.com/xmplusdev/xmcore/app/router"
+	net "github.com/xmplusdev/xmcore/common/net"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

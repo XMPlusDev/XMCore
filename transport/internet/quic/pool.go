@@ -3,7 +3,7 @@ package quic
 import (
 	"sync"
 
-	"github.com/xcode75/xcore/common/bytespool"
+	"github.com/xmplusdev/xmcore/common/bytespool"
 )
 
 var pool *sync.Pool

@@ -13,10 +13,10 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/xcode75/xcore/common/cmdarg"
-	"github.com/xcode75/xcore/common/platform"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/main/commands/base"
+	"github.com/xmplusdev/xmcore/common/cmdarg"
+	"github.com/xmplusdev/xmcore/common/platform"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 var cmdRun = &base.Command{

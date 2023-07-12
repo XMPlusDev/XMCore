@@ -12,10 +12,10 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/common"
 )
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 type Certificate struct {
 	// Cerificate in ASN.1 DER format

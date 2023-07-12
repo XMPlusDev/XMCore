@@ -3,7 +3,7 @@ package json
 import (
 	"io"
 
-	"github.com/xcode75/xcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/buf"
 )
 
 // State is the internal state of parser.

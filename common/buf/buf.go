@@ -1,4 +1,4 @@
 // Package buf provides a light-weight memory allocation mechanism.
-package buf // import "github.com/xcode75/xcore/common/buf"
+package buf // import "github.com/xmplusdev/xmcore/common/buf"
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen

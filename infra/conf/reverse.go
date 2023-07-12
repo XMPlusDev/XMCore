@@ -2,7 +2,7 @@ package conf
 
 import (
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/app/reverse"
+	"github.com/xmplusdev/xmcore/app/reverse"
 )
 
 type BridgeConfig struct {

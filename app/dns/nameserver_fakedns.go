@@ -3,9 +3,9 @@ package dns
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/dns"
 )
 
 type FakeDNSServer struct {

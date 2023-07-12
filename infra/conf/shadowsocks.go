@@ -6,10 +6,10 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/sagernet/sing-shadowsocks/shadowaead_2022"
 	C "github.com/sagernet/sing/common"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/proxy/shadowsocks"
-	"github.com/xcode75/xcore/proxy/shadowsocks_2022"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/proxy/shadowsocks"
+	"github.com/xmplusdev/xmcore/proxy/shadowsocks_2022"
 )
 
 func cipherFromString(c string) shadowsocks.CipherType {

@@ -7,8 +7,8 @@
 package core
 
 import (
-	serial "github.com/xcode75/xcore/common/serial"
-	global "github.com/xcode75/xcore/transport/global"
+	serial "github.com/xmplusdev/xmcore/common/serial"
+	global "github.com/xmplusdev/xmcore/transport/global"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

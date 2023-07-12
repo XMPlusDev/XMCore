@@ -1,8 +1,8 @@
 package api
 
 import (
-	logService "github.com/xcode75/xcore/app/log/command"
-	"github.com/xcode75/xcore/main/commands/base"
+	logService "github.com/xmplusdev/xmcore/app/log/command"
+	"github.com/xmplusdev/xmcore/main/commands/base"
 )
 
 var cmdRestartLogger = &base.Command{

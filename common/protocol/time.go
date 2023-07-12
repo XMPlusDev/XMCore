@@ -3,7 +3,7 @@ package protocol
 import (
 	"time"
 
-	"github.com/xcode75/xcore/common/dice"
+	"github.com/xmplusdev/xmcore/common/dice"
 )
 
 type Timestamp int64

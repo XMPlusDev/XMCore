@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xcode75/xcore/infra/conf/cfgcommon/duration"
+	"github.com/xmplusdev/xmcore/infra/conf/cfgcommon/duration"
 )
 
 type testWithDuration struct {

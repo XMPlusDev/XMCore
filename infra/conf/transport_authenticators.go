@@ -4,14 +4,14 @@ import (
 	"sort"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/transport/internet/headers/dns"
-	"github.com/xcode75/xcore/transport/internet/headers/http"
-	"github.com/xcode75/xcore/transport/internet/headers/noop"
-	"github.com/xcode75/xcore/transport/internet/headers/srtp"
-	"github.com/xcode75/xcore/transport/internet/headers/tls"
-	"github.com/xcode75/xcore/transport/internet/headers/utp"
-	"github.com/xcode75/xcore/transport/internet/headers/wechat"
-	"github.com/xcode75/xcore/transport/internet/headers/wireguard"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/dns"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/http"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/noop"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/srtp"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/tls"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/utp"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/wechat"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/wireguard"
 )
 
 type NoOpAuthenticator struct{}

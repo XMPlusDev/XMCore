@@ -10,9 +10,9 @@ import (
 	"sync"
 
 	"github.com/sagernet/wireguard-go/conn"
-	xnet "github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/transport/internet"
+	xnet "github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 type netReadInfo struct {

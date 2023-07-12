@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/signal"
-	"github.com/xcode75/xcore/common/signal/done"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/signal/done"
 )
 
 type state byte

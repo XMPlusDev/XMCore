@@ -1,8 +1,8 @@
 package localdns
 
 import (
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/dns"
 )
 
 // Client is an implementation of dns.Client, which queries localhost for DNS.

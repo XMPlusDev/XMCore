@@ -7,8 +7,8 @@
 package quic
 
 import (
-	protocol "github.com/xcode75/xcore/common/protocol"
-	serial "github.com/xcode75/xcore/common/serial"
+	protocol "github.com/xmplusdev/xmcore/common/protocol"
+	serial "github.com/xmplusdev/xmcore/common/serial"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

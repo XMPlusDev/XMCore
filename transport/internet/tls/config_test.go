@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/protocol/tls/cert"
-	. "github.com/xcode75/xcore/transport/internet/tls"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/protocol/tls/cert"
+	. "github.com/xmplusdev/xmcore/transport/internet/tls"
 )
 
 func TestCertificateIssuing(t *testing.T) {

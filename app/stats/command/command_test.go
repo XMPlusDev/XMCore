@@ -6,9 +6,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/xcode75/xcore/app/stats"
-	. "github.com/xcode75/xcore/app/stats/command"
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/app/stats"
+	. "github.com/xmplusdev/xmcore/app/stats/command"
+	"github.com/xmplusdev/xmcore/common"
 )
 
 func TestGetStats(t *testing.T) {

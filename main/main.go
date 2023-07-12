@@ -4,8 +4,8 @@ import (
 	"flag"
 	"os"
 
-	"github.com/xcode75/xcore/main/commands/base"
-	_ "github.com/xcode75/xcore/main/distro/all"
+	"github.com/xmplusdev/xmcore/main/commands/base"
+	_ "github.com/xmplusdev/xmcore/main/distro/all"
 )
 
 func main() {

@@ -3,10 +3,10 @@ package mux
 import (
 	"io"
 
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/crypto"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/crypto"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/serial"
 )
 
 // PacketReader is an io.Reader that reads whole chunk of Mux frames every time.

@@ -7,7 +7,7 @@
 package log
 
 import (
-	log "github.com/xcode75/xcore/common/log"
+	log "github.com/xmplusdev/xmcore/common/log"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

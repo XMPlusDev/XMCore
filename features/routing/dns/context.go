@@ -1,11 +1,11 @@
 package dns
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/routing"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/routing"
 )
 
 // ResolvableContext is an implementation of routing.Context, with domain resolving capability.

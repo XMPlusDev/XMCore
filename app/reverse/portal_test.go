@@ -3,8 +3,8 @@ package reverse_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/app/reverse"
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/app/reverse"
+	"github.com/xmplusdev/xmcore/common"
 )
 
 func TestStaticPickerEmpty(t *testing.T) {

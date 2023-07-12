@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/dice"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/dice"
 )
 
 type DNS struct {

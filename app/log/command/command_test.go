@@ -4,15 +4,15 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xcode75/xcore/app/dispatcher"
-	"github.com/xcode75/xcore/app/log"
-	. "github.com/xcode75/xcore/app/log/command"
-	"github.com/xcode75/xcore/app/proxyman"
-	_ "github.com/xcode75/xcore/app/proxyman/inbound"
-	_ "github.com/xcode75/xcore/app/proxyman/outbound"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/core"
+	"github.com/xmplusdev/xmcore/app/dispatcher"
+	"github.com/xmplusdev/xmcore/app/log"
+	. "github.com/xmplusdev/xmcore/app/log/command"
+	"github.com/xmplusdev/xmcore/app/proxyman"
+	_ "github.com/xmplusdev/xmcore/app/proxyman/inbound"
+	_ "github.com/xmplusdev/xmcore/app/proxyman/outbound"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/core"
 )
 
 func TestLoggerRestart(t *testing.T) {

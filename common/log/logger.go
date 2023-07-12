@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/xcode75/xcore/common/platform"
-	"github.com/xcode75/xcore/common/signal/done"
-	"github.com/xcode75/xcore/common/signal/semaphore"
+	"github.com/xmplusdev/xmcore/common/platform"
+	"github.com/xmplusdev/xmcore/common/signal/done"
+	"github.com/xmplusdev/xmcore/common/signal/semaphore"
 )
 
 // Writer is the interface for writing logs.

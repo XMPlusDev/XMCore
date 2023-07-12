@@ -7,7 +7,7 @@
 package global
 
 import (
-	internet "github.com/xcode75/xcore/transport/internet"
+	internet "github.com/xmplusdev/xmcore/transport/internet"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

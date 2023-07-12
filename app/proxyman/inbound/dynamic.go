@@ -5,14 +5,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xcode75/xcore/app/proxyman"
-	"github.com/xcode75/xcore/common/dice"
-	"github.com/xcode75/xcore/common/mux"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/task"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/proxy"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/app/proxyman"
+	"github.com/xmplusdev/xmcore/common/dice"
+	"github.com/xmplusdev/xmcore/common/mux"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/task"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/proxy"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 type DynamicInboundHandler struct {

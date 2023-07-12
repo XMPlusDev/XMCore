@@ -9,13 +9,13 @@
 // connections.
 package core
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"fmt"
 	"runtime"
 
-	"github.com/xcode75/xcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/serial"
 )
 
 var (

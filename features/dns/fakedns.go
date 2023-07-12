@@ -1,8 +1,8 @@
 package dns
 
 import (
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features"
 )
 
 type FakeDNSEngine interface {

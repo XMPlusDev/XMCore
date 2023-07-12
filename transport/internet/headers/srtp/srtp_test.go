@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	. "github.com/xcode75/xcore/transport/internet/headers/srtp"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	. "github.com/xmplusdev/xmcore/transport/internet/headers/srtp"
 )
 
 func TestSRTPWrite(t *testing.T) {

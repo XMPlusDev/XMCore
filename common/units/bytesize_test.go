@@ -3,7 +3,7 @@ package units_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common/units"
+	"github.com/xmplusdev/xmcore/common/units"
 )
 
 func TestByteSizes(t *testing.T) {

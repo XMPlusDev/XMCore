@@ -6,13 +6,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xcode75/xcore/app/router"
-	"github.com/xcode75/xcore/common/errors"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/strmatcher"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/routing"
+	"github.com/xmplusdev/xmcore/app/router"
+	"github.com/xmplusdev/xmcore/common/errors"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/strmatcher"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/routing"
 )
 
 // Server is the interface for Name Server.

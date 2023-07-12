@@ -7,7 +7,7 @@
 package protocol
 
 import (
-	serial "github.com/xcode75/xcore/common/serial"
+	serial "github.com/xmplusdev/xmcore/common/serial"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

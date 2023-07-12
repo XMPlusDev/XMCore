@@ -6,17 +6,17 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/features"
-	"github.com/xcode75/xcore/features/dns"
-	"github.com/xcode75/xcore/features/dns/localdns"
-	"github.com/xcode75/xcore/features/inbound"
-	"github.com/xcode75/xcore/features/outbound"
-	"github.com/xcode75/xcore/features/policy"
-	"github.com/xcode75/xcore/features/routing"
-	"github.com/xcode75/xcore/features/stats"
-	"github.com/xcode75/xcore/transport/internet"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/features"
+	"github.com/xmplusdev/xmcore/features/dns"
+	"github.com/xmplusdev/xmcore/features/dns/localdns"
+	"github.com/xmplusdev/xmcore/features/inbound"
+	"github.com/xmplusdev/xmcore/features/outbound"
+	"github.com/xmplusdev/xmcore/features/policy"
+	"github.com/xmplusdev/xmcore/features/routing"
+	"github.com/xmplusdev/xmcore/features/stats"
+	"github.com/xmplusdev/xmcore/transport/internet"
 )
 
 // Server is an instance of Xray. At any time, there must be at most one Server instance running.

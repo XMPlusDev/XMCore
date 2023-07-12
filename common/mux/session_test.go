@@ -3,7 +3,7 @@ package mux_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/common/mux"
+	. "github.com/xmplusdev/xmcore/common/mux"
 )
 
 func TestSessionManagerAdd(t *testing.T) {

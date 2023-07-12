@@ -1,6 +1,6 @@
 package task
 
-import "github.com/xcode75/xcore/common"
+import "github.com/xmplusdev/xmcore/common"
 
 // Close returns a func() that closes v.
 func Close(v interface{}) func() error {

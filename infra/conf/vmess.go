@@ -5,12 +5,12 @@ import (
 	"strings"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/common/uuid"
-	"github.com/xcode75/xcore/proxy/vmess"
-	"github.com/xcode75/xcore/proxy/vmess/inbound"
-	"github.com/xcode75/xcore/proxy/vmess/outbound"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/common/uuid"
+	"github.com/xmplusdev/xmcore/proxy/vmess"
+	"github.com/xmplusdev/xmcore/proxy/vmess/inbound"
+	"github.com/xmplusdev/xmcore/proxy/vmess/outbound"
 )
 
 type VMessAccount struct {

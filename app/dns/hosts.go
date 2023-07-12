@@ -1,11 +1,11 @@
 package dns
 
 import (
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/strmatcher"
-	"github.com/xcode75/xcore/features"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/strmatcher"
+	"github.com/xmplusdev/xmcore/features"
+	"github.com/xmplusdev/xmcore/features/dns"
 )
 
 // StaticHosts represents static domain-ip mapping in DNS server.

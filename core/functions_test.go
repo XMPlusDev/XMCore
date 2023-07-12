@@ -9,15 +9,15 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
-	"github.com/xcode75/xcore/app/dispatcher"
-	"github.com/xcode75/xcore/app/proxyman"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/serial"
-	core "github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/proxy/freedom"
-	"github.com/xcode75/xcore/testing/servers/tcp"
-	"github.com/xcode75/xcore/testing/servers/udp"
+	"github.com/xmplusdev/xmcore/app/dispatcher"
+	"github.com/xmplusdev/xmcore/app/proxyman"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/serial"
+	core "github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/proxy/freedom"
+	"github.com/xmplusdev/xmcore/testing/servers/tcp"
+	"github.com/xmplusdev/xmcore/testing/servers/udp"
 )
 
 func xor(b []byte) []byte {

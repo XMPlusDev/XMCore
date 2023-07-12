@@ -3,10 +3,10 @@ package vmess_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/uuid"
-	. "github.com/xcode75/xcore/proxy/vmess"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/uuid"
+	. "github.com/xmplusdev/xmcore/proxy/vmess"
 )
 
 func toAccount(a *Account) protocol.Account {

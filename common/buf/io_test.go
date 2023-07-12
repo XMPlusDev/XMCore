@@ -5,9 +5,9 @@ import (
 	"io"
 	"testing"
 
-	. "github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/testing/servers/tcp"
+	. "github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/testing/servers/tcp"
 )
 
 func TestWriterCreation(t *testing.T) {

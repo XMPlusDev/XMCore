@@ -4,9 +4,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/strmatcher"
-	"github.com/xcode75/xcore/features/routing"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/strmatcher"
+	"github.com/xmplusdev/xmcore/features/routing"
 )
 
 type Condition interface {

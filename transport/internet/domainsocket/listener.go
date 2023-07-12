@@ -10,12 +10,12 @@ import (
 	"strings"
 
 	goreality "github.com/xtls/reality"
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/reality"
-	"github.com/xcode75/xcore/transport/internet/stat"
-	"github.com/xcode75/xcore/transport/internet/tls"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/reality"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/transport/internet/tls"
 	"golang.org/x/sys/unix"
 )
 

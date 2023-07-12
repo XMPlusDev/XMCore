@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	. "github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/transport/pipe"
+	"github.com/xmplusdev/xmcore/common"
+	. "github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/transport/pipe"
 )
 
 func TestBytesReaderWriteTo(t *testing.T) {

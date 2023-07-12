@@ -1,6 +1,6 @@
 package outbound
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
@@ -9,23 +9,23 @@ import (
 	"hash/crc64"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/platform"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/retry"
-	"github.com/xcode75/xcore/common/session"
-	"github.com/xcode75/xcore/common/signal"
-	"github.com/xcode75/xcore/common/task"
-	"github.com/xcode75/xcore/common/xudp"
-	core "github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/policy"
-	"github.com/xcode75/xcore/proxy/vmess"
-	"github.com/xcode75/xcore/proxy/vmess/encoding"
-	"github.com/xcode75/xcore/transport"
-	"github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/stat"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/platform"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/retry"
+	"github.com/xmplusdev/xmcore/common/session"
+	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/common/task"
+	"github.com/xmplusdev/xmcore/common/xudp"
+	core "github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/policy"
+	"github.com/xmplusdev/xmcore/proxy/vmess"
+	"github.com/xmplusdev/xmcore/proxy/vmess/encoding"
+	"github.com/xmplusdev/xmcore/transport"
+	"github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
 
 // Handler is an outbound connection handler for VMess protocol.

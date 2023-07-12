@@ -4,8 +4,8 @@ import (
 	"context"
 	_ "unsafe"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/routing"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/routing"
 )
 
 //go:linkname IndependentCancelCtx context.newCancelCtx

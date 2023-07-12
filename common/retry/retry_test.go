@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/errors"
-	. "github.com/xcode75/xcore/common/retry"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/errors"
+	. "github.com/xmplusdev/xmcore/common/retry"
 )
 
 var errorTestOnly = errors.New("this is a fake error")

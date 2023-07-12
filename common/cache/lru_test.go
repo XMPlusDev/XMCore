@@ -3,7 +3,7 @@ package cache_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/common/cache"
+	. "github.com/xmplusdev/xmcore/common/cache"
 )
 
 func TestLruReplaceValue(t *testing.T) {

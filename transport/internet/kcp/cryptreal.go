@@ -5,7 +5,7 @@ import (
 	"crypto/cipher"
 	"crypto/sha256"
 
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/common"
 )
 
 func NewAEADAESGCMBasedOnSeed(seed string) cipher.AEAD {

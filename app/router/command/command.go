@@ -1,15 +1,15 @@
 package command
 
-//go:generate go run github.com/xcode75/xcore/common/errors/errorgen
+//go:generate go run github.com/xmplusdev/xmcore/common/errors/errorgen
 
 import (
 	"context"
 	"time"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/core"
-	"github.com/xcode75/xcore/features/routing"
-	"github.com/xcode75/xcore/features/stats"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/core"
+	"github.com/xmplusdev/xmcore/features/routing"
+	"github.com/xmplusdev/xmcore/features/stats"
 	"google.golang.org/grpc"
 )
 

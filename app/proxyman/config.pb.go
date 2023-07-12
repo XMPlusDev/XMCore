@@ -7,9 +7,9 @@
 package proxyman
 
 import (
-	net "github.com/xcode75/xcore/common/net"
-	serial "github.com/xcode75/xcore/common/serial"
-	internet "github.com/xcode75/xcore/transport/internet"
+	net "github.com/xmplusdev/xmcore/common/net"
+	serial "github.com/xmplusdev/xmcore/common/serial"
+	internet "github.com/xmplusdev/xmcore/transport/internet"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

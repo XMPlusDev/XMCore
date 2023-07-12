@@ -4,8 +4,8 @@ import (
 	"io"
 	"sync"
 
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/common/retry"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/common/retry"
 )
 
 type SegmentWriter interface {

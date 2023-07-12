@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	. "github.com/xcode75/xcore/common"
+	. "github.com/xmplusdev/xmcore/common"
 )
 
 type TConfig struct {

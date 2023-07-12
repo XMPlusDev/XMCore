@@ -7,10 +7,10 @@ import (
 	"syscall"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol"
-	"github.com/xcode75/xcore/common/serial"
-	"github.com/xcode75/xcore/proxy/trojan"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol"
+	"github.com/xmplusdev/xmcore/common/serial"
+	"github.com/xmplusdev/xmcore/proxy/trojan"
 )
 
 // TrojanServerTarget is configuration of a single trojan server

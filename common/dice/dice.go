@@ -1,6 +1,6 @@
 // Package dice contains common functions to generate random number.
 // It also initialize math/rand with the time in seconds at launch time.
-package dice // import "github.com/xcode75/xcore/common/dice"
+package dice // import "github.com/xmplusdev/xmcore/common/dice"
 
 import (
 	"math/rand"

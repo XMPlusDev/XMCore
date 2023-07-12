@@ -5,8 +5,8 @@ import (
 	"encoding/binary"
 	"hash/fnv"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/crypto"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/crypto"
 	"golang.org/x/crypto/sha3"
 )
 

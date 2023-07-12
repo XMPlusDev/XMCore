@@ -1,6 +1,6 @@
 package transport
 
-import "github.com/xcode75/xcore/common/buf"
+import "github.com/xmplusdev/xmcore/common/buf"
 
 // Link is a utility for connecting between an inbound and an outbound proxy handler.
 type Link struct {

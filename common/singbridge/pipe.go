@@ -6,8 +6,8 @@ import (
 	"net"
 
 	"github.com/sagernet/sing/common/bufio"
-	"github.com/xcode75/xcore/common/buf"
-	"github.com/xcode75/xcore/transport"
+	"github.com/xmplusdev/xmcore/common/buf"
+	"github.com/xmplusdev/xmcore/transport"
 )
 
 func CopyConn(ctx context.Context, inboundConn net.Conn, link *transport.Link, serverConn net.Conn) error {

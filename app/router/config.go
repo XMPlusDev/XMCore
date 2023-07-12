@@ -4,9 +4,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/features/outbound"
-	"github.com/xcode75/xcore/features/routing"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/features/outbound"
+	"github.com/xmplusdev/xmcore/features/routing"
 )
 
 // CIDRList is an alias of []*CIDR to provide sort.Interface.

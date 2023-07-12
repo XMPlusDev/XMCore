@@ -9,7 +9,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/xcode75/xcore/common"
+	"github.com/xmplusdev/xmcore/common"
 )
 
 func SealVMessAEADHeader(key [16]byte, data []byte) []byte {

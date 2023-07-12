@@ -7,7 +7,7 @@
 package command
 
 import (
-	observatory "github.com/xcode75/xcore/app/observatory"
+	observatory "github.com/xmplusdev/xmcore/app/observatory"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"

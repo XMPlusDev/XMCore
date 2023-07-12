@@ -3,9 +3,9 @@ package outbound
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/features"
-	"github.com/xcode75/xcore/transport"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/features"
+	"github.com/xmplusdev/xmcore/transport"
 )
 
 // Handler is the interface for handlers that process outbound connections.

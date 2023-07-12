@@ -3,8 +3,8 @@ package buf
 import (
 	"io"
 
-	"github.com/xcode75/xcore/common/bytespool"
-	"github.com/xcode75/xcore/common/net"
+	"github.com/xmplusdev/xmcore/common/bytespool"
+	"github.com/xmplusdev/xmcore/common/net"
 )
 
 const (

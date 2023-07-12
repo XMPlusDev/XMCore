@@ -3,12 +3,12 @@ package dispatcher
 import (
 	"context"
 
-	"github.com/xcode75/xcore/common"
-	"github.com/xcode75/xcore/common/net"
-	"github.com/xcode75/xcore/common/protocol/bittorrent"
-	"github.com/xcode75/xcore/common/protocol/http"
-	"github.com/xcode75/xcore/common/protocol/quic"
-	"github.com/xcode75/xcore/common/protocol/tls"
+	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/protocol/bittorrent"
+	"github.com/xmplusdev/xmcore/common/protocol/http"
+	"github.com/xmplusdev/xmcore/common/protocol/quic"
+	"github.com/xmplusdev/xmcore/common/protocol/tls"
 )
 
 type SniffResult interface {

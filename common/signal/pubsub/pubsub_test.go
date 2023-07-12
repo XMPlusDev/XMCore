@@ -3,7 +3,7 @@ package pubsub_test
 import (
 	"testing"
 
-	. "github.com/xcode75/xcore/common/signal/pubsub"
+	. "github.com/xmplusdev/xmcore/common/signal/pubsub"
 )
 
 func TestPubsub(t *testing.T) {

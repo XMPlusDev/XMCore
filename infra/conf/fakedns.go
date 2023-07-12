@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/xcode75/xcore/app/dns/fakedns"
-	"github.com/xcode75/xcore/features/dns"
+	"github.com/xmplusdev/xmcore/app/dns/fakedns"
+	"github.com/xmplusdev/xmcore/features/dns"
 )
 
 type FakeDNSPoolElementConfig struct {

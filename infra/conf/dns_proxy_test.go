@@ -3,9 +3,9 @@ package conf_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common/net"
-	. "github.com/xcode75/xcore/infra/conf"
-	"github.com/xcode75/xcore/proxy/dns"
+	"github.com/xmplusdev/xmcore/common/net"
+	. "github.com/xmplusdev/xmcore/infra/conf"
+	"github.com/xmplusdev/xmcore/proxy/dns"
 )
 
 func TestDnsProxyConfig(t *testing.T) {

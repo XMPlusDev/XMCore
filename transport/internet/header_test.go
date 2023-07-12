@@ -3,13 +3,13 @@ package internet_test
 import (
 	"testing"
 
-	"github.com/xcode75/xcore/common"
-	. "github.com/xcode75/xcore/transport/internet"
-	"github.com/xcode75/xcore/transport/internet/headers/noop"
-	"github.com/xcode75/xcore/transport/internet/headers/srtp"
-	"github.com/xcode75/xcore/transport/internet/headers/utp"
-	"github.com/xcode75/xcore/transport/internet/headers/wechat"
-	"github.com/xcode75/xcore/transport/internet/headers/wireguard"
+	"github.com/xmplusdev/xmcore/common"
+	. "github.com/xmplusdev/xmcore/transport/internet"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/noop"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/srtp"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/utp"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/wechat"
+	"github.com/xmplusdev/xmcore/transport/internet/headers/wireguard"
 )
 
 func TestAllHeadersLoadable(t *testing.T) {

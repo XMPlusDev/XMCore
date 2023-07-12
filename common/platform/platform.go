@@ -1,4 +1,4 @@
-package platform // import "github.com/xcode75/xcore/common/platform"
+package platform // import "github.com/xmplusdev/xmcore/common/platform"
 
 import (
 	"os"
