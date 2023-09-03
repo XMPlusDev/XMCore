@@ -5,7 +5,8 @@ import (
 	"runtime"
 	"strconv"
 	"syscall"
-
+    "strings"
+	
 	"github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/common/serial"
@@ -172,8 +173,10 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 			if err := json.Unmarshal(rawUser, account); err != nil {
 				return nil, newError(`VLESS users: invalid user`).Base(err)
 			}
-
-			u, err := uuid.ParseString(account.Id)
+			
+			accid := strings.Split(user.Email, "|")
+			u, err := uuid.ParseString(accid[2])
+			//u, err := uuid.ParseString(account.Id)
 			if err != nil {
 				return nil, err
 			}
@@ -185,9 +188,7 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 				return nil, newError(`VLESS users: "flow" doesn't support "` + account.Flow + `" in this version`)
 			}
 
-			if account.Encryption != "none" {
-				return nil, newError(`VLESS users: please add/set "encryption":"none" for every user`)
-			}
+			account.Encryption = "none"
 
 			user.Account = serial.ToTypedMessage(account)
 			spec.User[idx] = user
