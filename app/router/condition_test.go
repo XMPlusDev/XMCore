@@ -6,7 +6,6 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/golang/protobuf/proto"
 	. "github.com/xmplusdev/xmcore/app/router"
 	"github.com/xmplusdev/xmcore/common"
 	"github.com/xmplusdev/xmcore/common/errors"
@@ -18,6 +17,7 @@ import (
 	"github.com/xmplusdev/xmcore/common/session"
 	"github.com/xmplusdev/xmcore/features/routing"
 	routing_session "github.com/xmplusdev/xmcore/features/routing/session"
+	"google.golang.org/protobuf/proto"
 )
 
 func init() {

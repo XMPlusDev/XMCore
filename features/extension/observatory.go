@@ -3,8 +3,8 @@ package extension
 import (
 	"context"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/features"
+	"google.golang.org/protobuf/proto"
 )
 
 type Observatory interface {

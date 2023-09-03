@@ -1,9 +1,9 @@
 package conf
 
 import (
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/app/observatory"
 	"github.com/xmplusdev/xmcore/infra/conf/cfgcommon/duration"
+	"google.golang.org/protobuf/proto"
 )
 
 type ObservatoryConfig struct {

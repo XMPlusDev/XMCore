@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/common/serial"
 	. "github.com/xmplusdev/xmcore/infra/conf"
@@ -18,6 +17,7 @@ import (
 	"github.com/xmplusdev/xmcore/transport/internet/quic"
 	"github.com/xmplusdev/xmcore/transport/internet/tcp"
 	"github.com/xmplusdev/xmcore/transport/internet/websocket"
+	"google.golang.org/protobuf/proto"
 )
 
 func TestSocketConfig(t *testing.T) {

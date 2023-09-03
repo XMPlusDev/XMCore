@@ -11,7 +11,6 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/platform/filesystem"
 	"github.com/xmplusdev/xmcore/common/protocol"
@@ -26,6 +25,7 @@ import (
 	"github.com/xmplusdev/xmcore/transport/internet/tcp"
 	"github.com/xmplusdev/xmcore/transport/internet/tls"
 	"github.com/xmplusdev/xmcore/transport/internet/websocket"
+	"google.golang.org/protobuf/proto"
 )
 
 var (

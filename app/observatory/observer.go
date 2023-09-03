@@ -9,7 +9,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common"
 	v2net "github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/session"
@@ -19,6 +18,7 @@ import (
 	"github.com/xmplusdev/xmcore/features/extension"
 	"github.com/xmplusdev/xmcore/features/outbound"
 	"github.com/xmplusdev/xmcore/transport/internet/tagged"
+	"google.golang.org/protobuf/proto"
 )
 
 type Observer struct {

@@ -61,7 +61,6 @@ func (DefaultRouter) AddUsers(tag string, emails []string) {}
 // RemoveUsers implements Router.
 func (DefaultRouter) RemoveUsers(emails []string)          {}
 
-
 // Start implements common.Runnable.
 func (DefaultRouter) Start() error {
 	return nil

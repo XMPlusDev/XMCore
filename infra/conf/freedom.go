@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/golang/protobuf/proto"
 	v2net "github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/proxy/freedom"
+	"google.golang.org/protobuf/proto"
 )
 
 type FreedomConfig struct {

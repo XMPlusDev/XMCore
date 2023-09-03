@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/common/serial"
 	"github.com/xmplusdev/xmcore/common/uuid"
 	"github.com/xmplusdev/xmcore/proxy/vmess"
 	"github.com/xmplusdev/xmcore/proxy/vmess/inbound"
 	"github.com/xmplusdev/xmcore/proxy/vmess/outbound"
+	"google.golang.org/protobuf/proto"
 )
 
 type VMessAccount struct {

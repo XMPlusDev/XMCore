@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/common/serial"
 	"github.com/xmplusdev/xmcore/proxy/socks"
+	"google.golang.org/protobuf/proto"
 )
 
 type SocksAccount struct {

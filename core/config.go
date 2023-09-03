@@ -4,11 +4,11 @@ import (
 	"io"
 	"strings"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common"
 	"github.com/xmplusdev/xmcore/common/buf"
 	"github.com/xmplusdev/xmcore/common/cmdarg"
 	"github.com/xmplusdev/xmcore/main/confloader"
+	"google.golang.org/protobuf/proto"
 )
 
 // ConfigFormat is a configurable format of Xray config file.
@@ -57,7 +57,7 @@ func GetFormatByExtension(ext string) string {
 		return "yaml"
 	case "toml":
 		return "toml"
-	case "json":
+	case "json", "jsonc":
 		return "json"
 	default:
 		return ""

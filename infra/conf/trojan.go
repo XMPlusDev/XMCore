@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"syscall"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/common/serial"
 	"github.com/xmplusdev/xmcore/proxy/trojan"
+	"google.golang.org/protobuf/proto"
 )
 
 // TrojanServerTarget is configuration of a single trojan server

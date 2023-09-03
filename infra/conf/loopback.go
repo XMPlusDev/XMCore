@@ -1,8 +1,8 @@
 package conf
 
 import (
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/proxy/loopback"
+	"google.golang.org/protobuf/proto"
 )
 
 type LoopbackConfig struct {

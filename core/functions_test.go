@@ -7,7 +7,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
 	"github.com/xmplusdev/xmcore/app/dispatcher"
 	"github.com/xmplusdev/xmcore/app/proxyman"
@@ -18,6 +17,7 @@ import (
 	"github.com/xmplusdev/xmcore/proxy/freedom"
 	"github.com/xmplusdev/xmcore/testing/servers/tcp"
 	"github.com/xmplusdev/xmcore/testing/servers/udp"
+	"google.golang.org/protobuf/proto"
 )
 
 func xor(b []byte) []byte {

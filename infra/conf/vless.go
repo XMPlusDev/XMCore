@@ -6,7 +6,6 @@ import (
 	"strconv"
 	"syscall"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/common/serial"
@@ -14,6 +13,7 @@ import (
 	"github.com/xmplusdev/xmcore/proxy/vless"
 	"github.com/xmplusdev/xmcore/proxy/vless/inbound"
 	"github.com/xmplusdev/xmcore/proxy/vless/outbound"
+	"google.golang.org/protobuf/proto"
 )
 
 type VLessInboundFallback struct {

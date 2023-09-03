@@ -5,7 +5,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common"
 	"github.com/xmplusdev/xmcore/common/buf"
 	"github.com/xmplusdev/xmcore/common/mux"
@@ -15,6 +14,7 @@ import (
 	"github.com/xmplusdev/xmcore/features/outbound"
 	"github.com/xmplusdev/xmcore/transport"
 	"github.com/xmplusdev/xmcore/transport/pipe"
+	"google.golang.org/protobuf/proto"
 )
 
 type Portal struct {

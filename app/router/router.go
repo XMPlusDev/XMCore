@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"sort"
 	"sync"
-
+	
 	"github.com/xmplusdev/xmcore/common"
 	"github.com/xmplusdev/xmcore/core"
 	"github.com/xmplusdev/xmcore/features/dns"
@@ -33,6 +33,7 @@ type Route struct {
 	outboundGroupTags []string
 	outboundTag       string
 }
+
 
 func NewRouter() *Router {
 	con := NewConditionChan()

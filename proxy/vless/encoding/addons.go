@@ -3,10 +3,10 @@ package encoding
 import (
 	"io"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/buf"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/proxy/vless"
+	"google.golang.org/protobuf/proto"
 )
 
 func EncodeHeaderAddons(buffer *buf.Buffer, addons *Addons) error {

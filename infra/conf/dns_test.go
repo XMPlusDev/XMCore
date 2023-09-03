@@ -6,7 +6,6 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/app/dns"
 	"github.com/xmplusdev/xmcore/app/router"
 	"github.com/xmplusdev/xmcore/common"
@@ -14,6 +13,7 @@ import (
 	"github.com/xmplusdev/xmcore/common/platform"
 	"github.com/xmplusdev/xmcore/common/platform/filesystem"
 	. "github.com/xmplusdev/xmcore/infra/conf"
+	"google.golang.org/protobuf/proto"
 )
 
 func init() {

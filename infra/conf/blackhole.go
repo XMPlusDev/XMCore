@@ -3,9 +3,9 @@ package conf
 import (
 	"encoding/json"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/serial"
 	"github.com/xmplusdev/xmcore/proxy/blackhole"
+	"google.golang.org/protobuf/proto"
 )
 
 type NoneResponse struct{}

@@ -5,7 +5,6 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/google/go-cmp/cmp"
 	"github.com/xmplusdev/xmcore/app/dispatcher"
 	"github.com/xmplusdev/xmcore/app/log"
@@ -27,6 +26,7 @@ import (
 	"github.com/xmplusdev/xmcore/transport/internet/http"
 	"github.com/xmplusdev/xmcore/transport/internet/tls"
 	"github.com/xmplusdev/xmcore/transport/internet/websocket"
+	"google.golang.org/protobuf/proto"
 )
 
 func TestXrayConfig(t *testing.T) {

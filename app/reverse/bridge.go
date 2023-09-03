@@ -4,7 +4,6 @@ import (
 	"context"
 	"time"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/xmplusdev/xmcore/common/mux"
 	"github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/session"
@@ -12,6 +11,7 @@ import (
 	"github.com/xmplusdev/xmcore/features/routing"
 	"github.com/xmplusdev/xmcore/transport"
 	"github.com/xmplusdev/xmcore/transport/pipe"
+	"google.golang.org/protobuf/proto"
 )
 
 // Bridge is a component in reverse proxy, that relays connections from Portal to local address.
