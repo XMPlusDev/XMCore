@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/session"
 	"github.com/xmplusdev/xmcore/transport"
 	"github.com/xmplusdev/xmcore/transport/internet"
 )
@@ -30,6 +31,11 @@ func New(ctx context.Context, config *Config) (*Handler, error) {
 
 // Process implements OutboundHandler.Dispatch().
 func (h *Handler) Process(ctx context.Context, link *transport.Link, dialer internet.Dialer) error {
+	outbound := session.OutboundFromContext(ctx)
+	if outbound != nil {
+		outbound.Name = "blackhole"
+	}
+	
 	nBytes := h.response.WriteTo(link.Writer)
 	if nBytes > 0 {
 		// Sleep a little here to make sure the response is sent to client.

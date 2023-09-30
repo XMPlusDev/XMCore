@@ -6,6 +6,7 @@ import (
 
 	"github.com/xmplusdev/xmcore/common/errors"
 	"github.com/xmplusdev/xmcore/common/signal"
+	"github.com/xmplusdev/xmcore/features/stats"
 )
 
 type dataHandler func(MultiBuffer)
@@ -36,6 +37,17 @@ func CountSize(sc *SizeCounter) CopyOption {
 	return func(handler *copyHandler) {
 		handler.onData = append(handler.onData, func(b MultiBuffer) {
 			sc.Size += int64(b.Len())
+		})
+	}
+}
+
+// AddToStatCounter a CopyOption add to stat counter
+func AddToStatCounter(sc stats.Counter) CopyOption {
+	return func(handler *copyHandler) {
+		handler.onData = append(handler.onData, func(b MultiBuffer) {
+			if sc != nil {
+				sc.Add(int64(b.Len()))
+			}
 		})
 	}
 }

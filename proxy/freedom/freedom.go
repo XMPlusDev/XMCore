@@ -13,6 +13,7 @@ import (
 	"github.com/xmplusdev/xmcore/common/buf"
 	"github.com/xmplusdev/xmcore/common/dice"
 	"github.com/xmplusdev/xmcore/common/net"
+	"github.com/xmplusdev/xmcore/common/platform"
 	"github.com/xmplusdev/xmcore/common/retry"
 	"github.com/xmplusdev/xmcore/common/session"
 	"github.com/xmplusdev/xmcore/common/signal"
@@ -21,10 +22,13 @@ import (
 	"github.com/xmplusdev/xmcore/features/dns"
 	"github.com/xmplusdev/xmcore/features/policy"
 	"github.com/xmplusdev/xmcore/features/stats"
+	"github.com/xmplusdev/xmcore/proxy"
 	"github.com/xmplusdev/xmcore/transport"
 	"github.com/xmplusdev/xmcore/transport/internet"
 	"github.com/xmplusdev/xmcore/transport/internet/stat"
 )
+
+var useSplice bool
 
 func init() {
 	common.Must(common.RegisterConfig((*Config)(nil), func(ctx context.Context, config interface{}) (interface{}, error) {
@@ -36,6 +40,12 @@ func init() {
 		}
 		return h, nil
 	}))
+	const defaultFlagValue = "NOT_DEFINED_AT_ALL"
+	value := platform.NewEnvFlag("xray.buf.splice").GetValue(func() string { return defaultFlagValue })
+	switch value {
+	case "auto", "enable":
+		useSplice = true
+	}
 }
 
 // Handler handles Freedom connections.
@@ -106,6 +116,11 @@ func (h *Handler) Process(ctx context.Context, link *transport.Link, dialer inte
 	outbound := session.OutboundFromContext(ctx)
 	if outbound == nil || !outbound.Target.IsValid() {
 		return newError("target not specified.")
+	}
+	outbound.Name = "freedom"
+	inbound := session.InboundFromContext(ctx)
+	if inbound != nil {
+		inbound.SetCanSpliceCopy(1)
 	}
 	destination := outbound.Target
 	UDPOverride := net.UDPDestination(nil, 0)
@@ -195,17 +210,17 @@ func (h *Handler) Process(ctx context.Context, link *transport.Link, dialer inte
 
 	responseDone := func() error {
 		defer timer.SetTimeout(plcy.Timeouts.UplinkOnly)
-
-		var reader buf.Reader
 		if destination.Network == net.Network_TCP {
-			reader = buf.NewReader(conn)
-		} else {
-			reader = NewPacketReader(conn, UDPOverride)
+			var writeConn net.Conn
+			if inbound := session.InboundFromContext(ctx); inbound != nil && inbound.Conn != nil && useSplice {
+				writeConn = inbound.Conn
+			}
+			return proxy.CopyRawConnIfExist(ctx, conn, writeConn, link.Writer, timer)
 		}
+		reader := NewPacketReader(conn, UDPOverride)
 		if err := buf.Copy(reader, output, buf.UpdateActivity(timer)); err != nil {
 			return newError("failed to process response").Base(err)
 		}
-
 		return nil
 	}
 

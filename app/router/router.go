@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"sort"
 	"sync"
-	
+
 	"github.com/xmplusdev/xmcore/common"
 	"github.com/xmplusdev/xmcore/core"
 	"github.com/xmplusdev/xmcore/features/dns"
@@ -34,7 +34,6 @@ type Route struct {
 	outboundTag       string
 }
 
-
 func NewRouter() *Router {
 	con := NewConditionChan()
 	con.Add(NewInboundTagMatcher([]string{"asdf"}))
@@ -48,7 +47,6 @@ func NewRouter() *Router {
 		index2tag:    map[int]string{},
 	}
 }
-
 
 func Romvededuplicate(users []string) []string {
 	sort.Strings(users)
@@ -131,6 +129,7 @@ func (r *Router) RemoveUsers(Users []string) {
 
 		}
 	}
+	
 	for index, rl := range r.rules {
 		conditions, ok := rl.Condition.(*ConditionChan)
 		if ok {
@@ -153,12 +152,14 @@ func (r *Router) RemoveUsers(Users []string) {
 			}
 		}
 
-	}
-	newRules := make([]*Rule, len(r.rules)-len(removed_index))
+	} 
+	
+	newRules := make([]*Rule, len(r.rules) - len(removed_index))
 	m := make(map[int]bool, len(r.rules))
 	for _, reomve := range removed_index {
 		m[reomve] = true
 	}
+	
 	start := 0
 	for index, rl := range r.rules {
 		if !m[index] {
@@ -166,12 +167,14 @@ func (r *Router) RemoveUsers(Users []string) {
 			start += 1
 		}
 	}
+	
 	newtag2indexmap := make(map[string]int, len(newRules))
 	newindex2tag := make(map[int]string, len(newRules))
 	for index, rule := range newRules {
 		newtag2indexmap[rule.Tag] = index
 		newindex2tag[index] = rule.Tag
 	}
+	
 	r.rules = newRules
 	r.tag2indexmap = newtag2indexmap
 	r.index2tag = newindex2tag
