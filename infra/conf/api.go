@@ -38,7 +38,6 @@ func (c *APIConfig) Build() (*commander.Config, error) {
 			services = append(services, serial.ToTypedMessage(&observatoryservice.Config{}))
 		case "routingservice":
 			services = append(services, serial.ToTypedMessage(&routerservice.Config{}))
-		}
 		case "ruleservice":
 			services = append(services, serial.ToTypedMessage(&ruleservice.Config{}))	
 		}
