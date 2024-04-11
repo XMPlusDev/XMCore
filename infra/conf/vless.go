@@ -2,11 +2,12 @@ package conf
 
 import (
 	"encoding/json"
+	"path/filepath"
 	"runtime"
 	"strconv"
+	"strings"
 	"syscall"
-    "strings"
-	
+
 	"github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/protocol"
 	"github.com/xmplusdev/xmcore/common/serial"
@@ -104,22 +105,19 @@ func (c *VLessInboundConfig) Build() (proto.Message, error) {
 		if fb.Type == "" && fb.Dest != "" {
 			if fb.Dest == "serve-ws-none" {
 				fb.Type = "serve"
+			} else if filepath.IsAbs(fb.Dest) || fb.Dest[0] == '@' {
+				fb.Type = "unix"
+				if strings.HasPrefix(fb.Dest, "@@") && (runtime.GOOS == "linux" || runtime.GOOS == "android") {
+					fullAddr := make([]byte, len(syscall.RawSockaddrUnix{}.Path)) // may need padding to work with haproxy
+					copy(fullAddr, fb.Dest[1:])
+					fb.Dest = string(fullAddr)
+				}
 			} else {
-				switch fb.Dest[0] {
-				case '@', '/':
-					fb.Type = "unix"
-					if fb.Dest[0] == '@' && len(fb.Dest) > 1 && fb.Dest[1] == '@' && (runtime.GOOS == "linux" || runtime.GOOS == "android") {
-						fullAddr := make([]byte, len(syscall.RawSockaddrUnix{}.Path)) // may need padding to work with haproxy
-						copy(fullAddr, fb.Dest[1:])
-						fb.Dest = string(fullAddr)
-					}
-				default:
-					if _, err := strconv.Atoi(fb.Dest); err == nil {
-						fb.Dest = "127.0.0.1:" + fb.Dest
-					}
-					if _, _, err := net.SplitHostPort(fb.Dest); err == nil {
-						fb.Type = "tcp"
-					}
+				if _, err := strconv.Atoi(fb.Dest); err == nil {
+					fb.Dest = "127.0.0.1:" + fb.Dest
+				}
+				if _, _, err := net.SplitHostPort(fb.Dest); err == nil {
+					fb.Type = "tcp"
 				}
 			}
 		}
@@ -173,7 +171,7 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 			if err := json.Unmarshal(rawUser, account); err != nil {
 				return nil, newError(`VLESS users: invalid user`).Base(err)
 			}
-			
+
 			//u, err := uuid.ParseString(account.Id)
 			accid := strings.Split(user.Email, "|")
 			u, err := uuid.ParseString(accid[2])
@@ -187,8 +185,12 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 			default:
 				return nil, newError(`VLESS users: "flow" doesn't support "` + account.Flow + `" in this version`)
 			}
-
+			
 			account.Encryption = "none"
+			
+			if account.Encryption != "none" {
+				return nil, newError(`VLESS users: please add/set "encryption":"none" for every user`)
+			}
 
 			user.Account = serial.ToTypedMessage(account)
 			spec.User[idx] = user

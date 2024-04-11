@@ -2,11 +2,11 @@ package core
 
 import (
 	"context"
-	"os"
 	"reflect"
 	"sync"
 
 	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/platform"
 	"github.com/xmplusdev/xmcore/common/serial"
 	"github.com/xmplusdev/xmcore/features"
 	"github.com/xmplusdev/xmcore/features/dns"
@@ -181,7 +181,8 @@ func NewWithContext(ctx context.Context, config *Config) (*Instance, error) {
 }
 
 func initInstanceWithConfig(config *Config, server *Instance) (bool, error) {
-	server.ctx = context.WithValue(server.ctx, "cone", os.Getenv("XRAY_CONE_DISABLED") != "true")
+	server.ctx = context.WithValue(server.ctx, "cone", 
+		platform.NewEnvFlag(platform.UseCone).GetValue(func() string { return "" }) != "true")
 
 	if config.Transport != nil {
 		features.PrintDeprecatedFeatureWarning("global transport settings")

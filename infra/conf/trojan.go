@@ -2,8 +2,10 @@ package conf
 
 import (
 	"encoding/json"
+	"path/filepath"
 	"runtime"
 	"strconv"
+	"strings"
 	"syscall"
 
 	"github.com/xmplusdev/xmcore/common/net"
@@ -47,7 +49,10 @@ func (c *TrojanClientConfig) Build() (proto.Message, error) {
 		}
 		if rec.Password == "" {
 			return nil, newError("Trojan password is not specified.")
-		}		
+		}
+		//if rec.Flow != "" {
+		//	return nil, newError(`Trojan doesn't support "flow" anymore.`)
+		//}
 
 		config.Server[idx] = &protocol.ServerEndpoint{
 			Address: rec.Address.Build(),
@@ -99,9 +104,9 @@ func (c *TrojanServerConfig) Build() (proto.Message, error) {
 	}
 
 	for idx, rawUser := range c.Clients {
-		if rawUser.Flow != "" {
-			return nil, newError(`Trojan doesn't support "flow" anymore.`)
-		}
+		//if rawUser.Flow != "" {
+		//	return nil, newError(`Trojan doesn't support "flow" anymore.`)
+		//}
 
 		config.Users[idx] = &protocol.User{
 			Level: uint32(rawUser.Level),
@@ -144,22 +149,19 @@ func (c *TrojanServerConfig) Build() (proto.Message, error) {
 		if fb.Type == "" && fb.Dest != "" {
 			if fb.Dest == "serve-ws-none" {
 				fb.Type = "serve"
+			} else if filepath.IsAbs(fb.Dest) || fb.Dest[0] == '@' {
+				fb.Type = "unix"
+				if strings.HasPrefix(fb.Dest, "@@") && (runtime.GOOS == "linux" || runtime.GOOS == "android") {
+					fullAddr := make([]byte, len(syscall.RawSockaddrUnix{}.Path)) // may need padding to work with haproxy
+					copy(fullAddr, fb.Dest[1:])
+					fb.Dest = string(fullAddr)
+				}
 			} else {
-				switch fb.Dest[0] {
-				case '@', '/':
-					fb.Type = "unix"
-					if fb.Dest[0] == '@' && len(fb.Dest) > 1 && fb.Dest[1] == '@' && (runtime.GOOS == "linux" || runtime.GOOS == "android") {
-						fullAddr := make([]byte, len(syscall.RawSockaddrUnix{}.Path)) // may need padding to work with haproxy
-						copy(fullAddr, fb.Dest[1:])
-						fb.Dest = string(fullAddr)
-					}
-				default:
-					if _, err := strconv.Atoi(fb.Dest); err == nil {
-						fb.Dest = "127.0.0.1:" + fb.Dest
-					}
-					if _, _, err := net.SplitHostPort(fb.Dest); err == nil {
-						fb.Type = "tcp"
-					}
+				if _, err := strconv.Atoi(fb.Dest); err == nil {
+					fb.Dest = "127.0.0.1:" + fb.Dest
+				}
+				if _, _, err := net.SplitHostPort(fb.Dest); err == nil {
+					fb.Type = "tcp"
 				}
 			}
 		}

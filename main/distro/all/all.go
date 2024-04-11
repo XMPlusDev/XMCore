@@ -53,6 +53,7 @@ import (
 	_ "github.com/xmplusdev/xmcore/transport/internet/domainsocket"
 	_ "github.com/xmplusdev/xmcore/transport/internet/grpc"
 	_ "github.com/xmplusdev/xmcore/transport/internet/http"
+	_ "github.com/xmplusdev/xmcore/transport/internet/httpupgrade"
 	_ "github.com/xmplusdev/xmcore/transport/internet/kcp"
 	_ "github.com/xmplusdev/xmcore/transport/internet/quic"
 	_ "github.com/xmplusdev/xmcore/transport/internet/reality"

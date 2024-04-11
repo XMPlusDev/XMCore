@@ -13,8 +13,10 @@ import (
 	"math/big"
 	"runtime"
 	"strconv"
+	"time"
 
 	"github.com/pires/go-proxyproto"
+	"github.com/xmplusdev/xmcore/app/dispatcher"
 	"github.com/xmplusdev/xmcore/common/buf"
 	"github.com/xmplusdev/xmcore/common/errors"
 	"github.com/xmplusdev/xmcore/common/net"
@@ -257,7 +259,7 @@ func ReshapeMultiBuffer(ctx context.Context, buffer buf.MultiBuffer) buf.MultiBu
 	for i, buffer1 := range buffer {
 		if buffer1.Len() >= buf.Size-21 {
 			index := int32(bytes.LastIndex(buffer1.Bytes(), TlsApplicationDataStart))
-			if index <= 0 || index > buf.Size-21 {
+			if index < 21 || index > buf.Size-21 {
 				index = buf.Size / 2
 			}
 			buffer2 := buf.New()
@@ -477,13 +479,18 @@ func CopyRawConnIfExist(ctx context.Context, readerConn net.Conn, writerConn net
 			for inbound.CanSpliceCopy != 3 {
 				if inbound.CanSpliceCopy == 1 {
 					newError("CopyRawConn splice").WriteToLog(session.ExportIDToError(ctx))
-					runtime.Gosched() // necessary
+					statWriter, _ := writer.(*dispatcher.SizeStatWriter)
+					//runtime.Gosched() // necessary
+					time.Sleep(time.Millisecond) // without this, there will be a rare ssl error for freedom splice
 					w, err := tc.ReadFrom(readerConn)
 					if readCounter != nil {
-						readCounter.Add(w)
+						readCounter.Add(w) // outbound stats
 					}
 					if writeCounter != nil {
-						writeCounter.Add(w)
+						writeCounter.Add(w) // inbound stats
+					}
+					if statWriter != nil {
+						statWriter.Counter.Add(w) // user stats
 					}
 					if err != nil && errors.Cause(err) != io.EOF {
 						return err

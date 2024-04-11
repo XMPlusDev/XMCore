@@ -19,6 +19,7 @@ import (
 	"github.com/xmplusdev/xmcore/transport/internet/domainsocket"
 	httpheader "github.com/xmplusdev/xmcore/transport/internet/headers/http"
 	"github.com/xmplusdev/xmcore/transport/internet/http"
+	"github.com/xmplusdev/xmcore/transport/internet/httpupgrade"
 	"github.com/xmplusdev/xmcore/transport/internet/kcp"
 	"github.com/xmplusdev/xmcore/transport/internet/quic"
 	"github.com/xmplusdev/xmcore/transport/internet/reality"
@@ -145,6 +146,7 @@ func (c *TCPConfig) Build() (proto.Message, error) {
 }
 
 type WebSocketConfig struct {
+	Host                string            `json:"host"`
 	Path                string            `json:"path"`
 	Headers             map[string]string `json:"headers"`
 	AcceptProxyProtocol bool              `json:"acceptProxyProtocol"`
@@ -153,13 +155,6 @@ type WebSocketConfig struct {
 // Build implements Buildable.
 func (c *WebSocketConfig) Build() (proto.Message, error) {
 	path := c.Path
-	header := make([]*websocket.Header, 0, 32)
-	for key, value := range c.Headers {
-		header = append(header, &websocket.Header{
-			Key:   key,
-			Value: value,
-		})
-	}
 	var ed uint32
 	if u, err := url.Parse(path); err == nil {
 		if q := u.Query(); q.Get("ed") != "" {
@@ -170,13 +165,58 @@ func (c *WebSocketConfig) Build() (proto.Message, error) {
 			path = u.String()
 		}
 	}
-	config := &websocket.Config{
-		Path:   path,
-		Header: header,
-		Ed:     ed,
+	// If http host is not set in the Host field, but in headers field, we add it to Host Field here.
+	// If we don't do that, http host will be overwritten as address.
+	// Host priority: Host field > headers field > address.
+	if c.Host == "" && c.Headers["host"] != "" {
+		c.Host = c.Headers["host"]
+	} else if c.Host == "" && c.Headers["Host"] != "" {
+		c.Host = c.Headers["Host"]
 	}
-	if c.AcceptProxyProtocol {
-		config.AcceptProxyProtocol = c.AcceptProxyProtocol
+	config := &websocket.Config{
+		Path:                path,
+		Host:                c.Host,
+		Header:              c.Headers,
+		AcceptProxyProtocol: c.AcceptProxyProtocol,
+		Ed:                  ed,
+	}
+	return config, nil
+}
+
+type HttpUpgradeConfig struct {
+	Host                string            `json:"host"`
+	Path                string            `json:"path"`
+	Headers             map[string]string `json:"headers"`
+	AcceptProxyProtocol bool              `json:"acceptProxyProtocol"`
+}
+
+// Build implements Buildable.
+func (c *HttpUpgradeConfig) Build() (proto.Message, error) {
+	path := c.Path
+	var ed uint32
+	if u, err := url.Parse(path); err == nil {
+		if q := u.Query(); q.Get("ed") != "" {
+			Ed, _ := strconv.Atoi(q.Get("ed"))
+			ed = uint32(Ed)
+			q.Del("ed")
+			u.RawQuery = q.Encode()
+			path = u.String()
+		}
+	}
+	// If http host is not set in the Host field, but in headers field, we add it to Host Field here.
+	// If we don't do that, http host will be overwritten as address.
+	// Host priority: Host field > headers field > address.
+	if c.Host == "" && c.Headers["host"] != "" {
+		c.Host = c.Headers["host"]
+	} else if c.Host == "" && c.Headers["Host"] != "" {
+		c.Host = c.Headers["Host"]
+	}
+	config := &httpupgrade.Config{
+		Path:                path,
+		Host:                c.Host,
+		Header:              c.Headers,
+		AcceptProxyProtocol: c.AcceptProxyProtocol,
+		Ed:                  ed,
 	}
 	return config, nil
 }
@@ -357,6 +397,7 @@ type TLSConfig struct {
 	RejectUnknownSNI                     bool             `json:"rejectUnknownSni"`
 	PinnedPeerCertificateChainSha256     *[]string        `json:"pinnedPeerCertificateChainSha256"`
 	PinnedPeerCertificatePublicKeySha256 *[]string        `json:"pinnedPeerCertificatePublicKeySha256"`
+	MasterKeyLog                         string           `json:"masterKeyLog"`
 }
 
 // Build implements Buildable.
@@ -412,11 +453,14 @@ func (c *TLSConfig) Build() (proto.Message, error) {
 		}
 	}
 
+	config.MasterKeyLog = c.MasterKeyLog
+
 	return config, nil
 }
 
 type REALITYConfig struct {
 	Show         bool            `json:"show"`
+	MasterKeyLog string          `json:"masterKeyLog"`
 	Dest         json.RawMessage `json:"dest"`
 	Type         string          `json:"type"`
 	Xver         uint64          `json:"xver"`
@@ -437,6 +481,7 @@ type REALITYConfig struct {
 func (c *REALITYConfig) Build() (proto.Message, error) {
 	config := new(reality.Config)
 	config.Show = c.Show
+	config.MasterKeyLog = c.MasterKeyLog
 	var err error
 	if c.Dest != nil {
 		var i uint16
@@ -601,6 +646,8 @@ func (p TransportProtocol) Build() (string, error) {
 		return "quic", nil
 	case "grpc", "gun":
 		return "grpc", nil
+	case "httpupgrade":
+		return "httpupgrade", nil
 	default:
 		return "", newError("Config: unknown transport protocol: ", p)
 	}
@@ -654,12 +701,30 @@ func (c *SocketConfig) Build() (*internet.SocketConfig, error) {
 
 	dStrategy := internet.DomainStrategy_AS_IS
 	switch strings.ToLower(c.DomainStrategy) {
-	case "useip", "use_ip":
+	case "asis", "":
+		dStrategy = internet.DomainStrategy_AS_IS
+	case "useip":
 		dStrategy = internet.DomainStrategy_USE_IP
-	case "useip4", "useipv4", "use_ipv4", "use_ip_v4", "use_ip4":
+	case "useipv4":
 		dStrategy = internet.DomainStrategy_USE_IP4
-	case "useip6", "useipv6", "use_ipv6", "use_ip_v6", "use_ip6":
+	case "useipv6":
 		dStrategy = internet.DomainStrategy_USE_IP6
+	case "useipv4v6":
+		dStrategy = internet.DomainStrategy_USE_IP46
+	case "useipv6v4":
+		dStrategy = internet.DomainStrategy_USE_IP64
+	case "forceip":
+		dStrategy = internet.DomainStrategy_FORCE_IP
+	case "forceipv4":
+		dStrategy = internet.DomainStrategy_FORCE_IP4
+	case "forceipv6":
+		dStrategy = internet.DomainStrategy_FORCE_IP6
+	case "forceipv4v6":
+		dStrategy = internet.DomainStrategy_FORCE_IP46
+	case "forceipv6v4":
+		dStrategy = internet.DomainStrategy_FORCE_IP64
+	default:
+		return nil, newError("unsupported domain strategy: ", c.DomainStrategy)
 	}
 
 	return &internet.SocketConfig{
@@ -683,19 +748,20 @@ func (c *SocketConfig) Build() (*internet.SocketConfig, error) {
 }
 
 type StreamConfig struct {
-	Network         *TransportProtocol  `json:"network"`
-	Security        string              `json:"security"`
-	TLSSettings     *TLSConfig          `json:"tlsSettings"`
-	REALITYSettings *REALITYConfig      `json:"realitySettings"`
-	TCPSettings     *TCPConfig          `json:"tcpSettings"`
-	KCPSettings     *KCPConfig          `json:"kcpSettings"`
-	WSSettings      *WebSocketConfig    `json:"wsSettings"`
-	HTTPSettings    *HTTPConfig         `json:"httpSettings"`
-	DSSettings      *DomainSocketConfig `json:"dsSettings"`
-	QUICSettings    *QUICConfig         `json:"quicSettings"`
-	SocketSettings  *SocketConfig       `json:"sockopt"`
-	GRPCConfig      *GRPCConfig         `json:"grpcSettings"`
-	GUNConfig       *GRPCConfig         `json:"gunSettings"`
+	Network             *TransportProtocol  `json:"network"`
+	Security            string              `json:"security"`
+	TLSSettings         *TLSConfig          `json:"tlsSettings"`
+	REALITYSettings     *REALITYConfig      `json:"realitySettings"`
+	TCPSettings         *TCPConfig          `json:"tcpSettings"`
+	KCPSettings         *KCPConfig          `json:"kcpSettings"`
+	WSSettings          *WebSocketConfig    `json:"wsSettings"`
+	HTTPSettings        *HTTPConfig         `json:"httpSettings"`
+	DSSettings          *DomainSocketConfig `json:"dsSettings"`
+	QUICSettings        *QUICConfig         `json:"quicSettings"`
+	SocketSettings      *SocketConfig       `json:"sockopt"`
+	GRPCConfig          *GRPCConfig         `json:"grpcSettings"`
+	GUNConfig           *GRPCConfig         `json:"gunSettings"`
+	HTTPUPGRADESettings *HttpUpgradeConfig  `json:"httpupgradeSettings"`
 }
 
 // Build implements Buildable.
@@ -814,6 +880,16 @@ func (c *StreamConfig) Build() (*internet.StreamConfig, error) {
 		config.TransportSettings = append(config.TransportSettings, &internet.TransportConfig{
 			ProtocolName: "grpc",
 			Settings:     serial.ToTypedMessage(gs),
+		})
+	}
+	if c.HTTPUPGRADESettings != nil {
+		hs, err := c.HTTPUPGRADESettings.Build()
+		if err != nil {
+			return nil, newError("Failed to build HttpUpgrade config.").Base(err)
+		}
+		config.TransportSettings = append(config.TransportSettings, &internet.TransportConfig{
+			ProtocolName: "httpupgrade",
+			Settings:     serial.ToTypedMessage(hs),
 		})
 	}
 	if c.SocketSettings != nil {

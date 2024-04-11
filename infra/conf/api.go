@@ -7,6 +7,7 @@ import (
 	loggerservice "github.com/xmplusdev/xmcore/app/log/command"
 	observatoryservice "github.com/xmplusdev/xmcore/app/observatory/command"
 	handlerservice "github.com/xmplusdev/xmcore/app/proxyman/command"
+	routerservice "github.com/xmplusdev/xmcore/app/router/command"
 	statsservice "github.com/xmplusdev/xmcore/app/stats/command"
 	ruleservice "github.com/xmplusdev/xmcore/app/router/command"
 	"github.com/xmplusdev/xmcore/common/serial"
@@ -35,6 +36,9 @@ func (c *APIConfig) Build() (*commander.Config, error) {
 			services = append(services, serial.ToTypedMessage(&statsservice.Config{}))
 		case "observatoryservice":
 			services = append(services, serial.ToTypedMessage(&observatoryservice.Config{}))
+		case "routingservice":
+			services = append(services, serial.ToTypedMessage(&routerservice.Config{}))
+		}
 		case "ruleservice":
 			services = append(services, serial.ToTypedMessage(&ruleservice.Config{}))	
 		}

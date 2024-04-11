@@ -2,10 +2,8 @@ package outbound
 
 import (
 	"context"
+	"crypto/rand"
 	"errors"
-	"io"
-	"os"
-
 	"github.com/xmplusdev/xmcore/app/proxyman"
 	"github.com/xmplusdev/xmcore/common"
 	"github.com/xmplusdev/xmcore/common/buf"
@@ -23,6 +21,10 @@ import (
 	"github.com/xmplusdev/xmcore/transport/internet/stat"
 	"github.com/xmplusdev/xmcore/transport/internet/tls"
 	"github.com/xmplusdev/xmcore/transport/pipe"
+	"io"
+	"math/big"
+	gonet "net"
+	"os"
 )
 
 func getStatCounter(v *core.Instance, tag string) (stats.Counter, stats.Counter) {
@@ -229,6 +231,10 @@ func (h *Handler) Address() net.Address {
 	return h.senderSettings.Via.AsAddress()
 }
 
+func (h *Handler) DestIpAddress() net.IP {
+	return internet.DestIpAddress()
+}
+
 // Dial implements internet.Dialer.
 func (h *Handler) Dial(ctx context.Context, dest net.Destination) (stat.Connection, error) {
 	if h.senderSettings != nil {
@@ -265,7 +271,11 @@ func (h *Handler) Dial(ctx context.Context, dest net.Destination) (stat.Connecti
 				outbound = new(session.Outbound)
 				ctx = session.ContextWithOutbound(ctx, outbound)
 			}
-			outbound.Gateway = h.senderSettings.Via.AsAddress()
+			if h.senderSettings.ViaCidr == "" {
+				outbound.Gateway = h.senderSettings.Via.AsAddress()
+			} else { //Get a random address.
+				outbound.Gateway = ParseRandomIPv6(h.senderSettings.Via.AsAddress(), h.senderSettings.ViaCidr)
+			}
 		}
 	}
 
@@ -307,4 +317,23 @@ func (h *Handler) Start() error {
 func (h *Handler) Close() error {
 	common.Close(h.mux)
 	return nil
+}
+
+
+func ParseRandomIPv6(address net.Address, prefix string) net.Address {
+	_, network, _ := gonet.ParseCIDR(address.IP().String() + "/" + prefix)
+
+	maskSize, totalBits := network.Mask.Size()
+	subnetSize := big.NewInt(1).Lsh(big.NewInt(1), uint(totalBits-maskSize))
+
+	// random
+	randomBigInt, _ := rand.Int(rand.Reader, subnetSize)
+
+	startIPBigInt := big.NewInt(0).SetBytes(network.IP.To16())
+	randomIPBigInt := big.NewInt(0).Add(startIPBigInt, randomBigInt)
+
+	randomIPBytes := randomIPBigInt.Bytes()
+	randomIPBytes = append(make([]byte, 16-len(randomIPBytes)), randomIPBytes...)
+
+	return net.ParseAddress(gonet.IP(randomIPBytes).String())
 }

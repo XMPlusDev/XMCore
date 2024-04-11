@@ -236,11 +236,9 @@ func TestXrayConfig(t *testing.T) {
 									{
 										ProtocolName: "websocket",
 										Settings: serial.ToTypedMessage(&websocket.Config{
-											Header: []*websocket.Header{
-												{
-													Key:   "host",
-													Value: "example.domain",
-												},
+											Host: "example.domain",
+											Header: map[string]string{
+												"host": "example.domain",
 											},
 										}),
 									},
@@ -291,11 +289,9 @@ func TestXrayConfig(t *testing.T) {
 									{
 										ProtocolName: "websocket",
 										Settings: serial.ToTypedMessage(&websocket.Config{
-											Header: []*websocket.Header{
-												{
-													Key:   "host",
-													Value: "example.domain",
-												},
+											Host: "example.domain",
+											Header: map[string]string{
+												"host": "example.domain",
 											},
 										}),
 									},
@@ -427,7 +423,7 @@ func TestConfig_Override(t *testing.T) {
 			&Config{InboundConfigs: []InboundDetourConfig{{Tag: "pos0"}, {Protocol: "vmess", Tag: "pos1"}}},
 			&Config{InboundConfigs: []InboundDetourConfig{{Tag: "pos1", Protocol: "kcp"}, {Tag: "pos2", Protocol: "kcp"}}},
 			"",
-			&Config{InboundConfigs: []InboundDetourConfig{{Tag: "pos1", Protocol: "kcp"}, {Tag: "pos2", Protocol: "kcp"}}},
+			&Config{InboundConfigs: []InboundDetourConfig{{Tag: "pos0"}, {Tag: "pos1", Protocol: "kcp"}, {Tag: "pos2", Protocol: "kcp"}}},
 		},
 		{
 			"replace/notag-append",
@@ -445,10 +441,10 @@ func TestConfig_Override(t *testing.T) {
 		},
 		{
 			"replace/outbounds-prepend",
-			&Config{OutboundConfigs: []OutboundDetourConfig{{Tag: "pos0"}, {Protocol: "vmess", Tag: "pos1"}}},
-			&Config{OutboundConfigs: []OutboundDetourConfig{{Tag: "pos1", Protocol: "kcp"}, {Tag: "pos2", Protocol: "kcp"}}},
+			&Config{OutboundConfigs: []OutboundDetourConfig{{Tag: "pos0"}, {Protocol: "vmess", Tag: "pos1"}, {Tag: "pos3"}}},
+			&Config{OutboundConfigs: []OutboundDetourConfig{{Tag: "pos1", Protocol: "kcp"}, {Tag: "pos2", Protocol: "kcp"}, {Tag: "pos4", Protocol: "kcp"}}},
 			"config.json",
-			&Config{OutboundConfigs: []OutboundDetourConfig{{Tag: "pos1", Protocol: "kcp"}, {Tag: "pos2", Protocol: "kcp"}}},
+			&Config{OutboundConfigs: []OutboundDetourConfig{{Tag: "pos2", Protocol: "kcp"}, {Tag: "pos4", Protocol: "kcp"}, {Tag: "pos0"}, {Tag: "pos1", Protocol: "kcp"}, {Tag: "pos3"}}},
 		},
 		{
 			"replace/outbounds-append",

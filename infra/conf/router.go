@@ -9,6 +9,7 @@ import (
 	"github.com/xmplusdev/xmcore/app/router"
 	"github.com/xmplusdev/xmcore/common/net"
 	"github.com/xmplusdev/xmcore/common/platform/filesystem"
+	"github.com/xmplusdev/xmcore/common/serial"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -24,11 +25,13 @@ type StrategyConfig struct {
 }
 
 type BalancingRule struct {
-	Tag       string         `json:"tag"`
-	Selectors StringList     `json:"selector"`
-	Strategy  StrategyConfig `json:"strategy"`
+	Tag         string         `json:"tag"`
+	Selectors   StringList     `json:"selector"`
+	Strategy    StrategyConfig `json:"strategy"`
+	FallbackTag string         `json:"fallbackTag"`
 }
 
+// Build builds the balancing rule
 func (r *BalancingRule) Build() (*router.BalancingRule, error) {
 	if r.Tag == "" {
 		return nil, newError("empty balancer tag")
@@ -37,20 +40,37 @@ func (r *BalancingRule) Build() (*router.BalancingRule, error) {
 		return nil, newError("empty selector list")
 	}
 
-	var strategy string
-	switch strings.ToLower(r.Strategy.Type) {
-	case strategyRandom, "":
-		strategy = strategyRandom
-	case strategyLeastPing:
-		strategy = "leastPing"
+	r.Strategy.Type = strings.ToLower(r.Strategy.Type)
+	switch r.Strategy.Type {
+	case "":
+		r.Strategy.Type = strategyRandom
+	case strategyRandom, strategyLeastLoad, strategyLeastPing, strategyRoundRobin:
 	default:
 		return nil, newError("unknown balancing strategy: " + r.Strategy.Type)
 	}
 
+	settings := []byte("{}")
+	if r.Strategy.Settings != nil {
+		settings = ([]byte)(*r.Strategy.Settings)
+	}
+	rawConfig, err := strategyConfigLoader.LoadWithID(settings, r.Strategy.Type)
+	if err != nil {
+		return nil, newError("failed to parse to strategy config.").Base(err)
+	}
+	var ts proto.Message
+	if builder, ok := rawConfig.(Buildable); ok {
+		ts, err = builder.Build()
+		if err != nil {
+			return nil, err
+		}
+	}
+
 	return &router.BalancingRule{
+		Strategy:         r.Strategy.Type,
+		StrategySettings: serial.ToTypedMessage(ts),
+		FallbackTag:      r.FallbackTag,
+		OutboundSelector: r.Selectors,
 		Tag:              r.Tag,
-		OutboundSelector: []string(r.Selectors),
-		Strategy:         strategy,
 	}, nil
 }
 
@@ -119,6 +139,7 @@ func (c *RouterConfig) Build() (*router.Config, error) {
 }
 
 type RouterRule struct {
+	RuleTag     string `json:"ruleTag"`
 	Type        string `json:"type"`
 	OutboundTag string `json:"outboundTag"`
 	BalancerTag string `json:"balancerTag"`
@@ -540,6 +561,7 @@ func parseFieldRule(msg json.RawMessage) (*router.RoutingRule, error) {
 	}
 
 	rule := new(router.RoutingRule)
+	rule.RuleTag = rawFieldRule.RuleTag
 	switch {
 	case len(rawFieldRule.OutboundTag) > 0:
 		rule.TargetTag = &router.RoutingRule_Tag{
@@ -636,62 +658,12 @@ func ParseRule(msg json.RawMessage) (*router.RoutingRule, error) {
 	if err != nil {
 		return nil, newError("invalid router rule").Base(err)
 	}
-	if strings.EqualFold(rawRule.Type, "field") {
+	if rawRule.Type == "" || strings.EqualFold(rawRule.Type, "field") {
 		fieldrule, err := parseFieldRule(msg)
 		if err != nil {
 			return nil, newError("invalid field rule").Base(err)
 		}
 		return fieldrule, nil
 	}
-	if strings.EqualFold(rawRule.Type, "chinaip") {
-		chinaiprule, err := parseChinaIPRule(msg)
-		if err != nil {
-			return nil, newError("invalid chinaip rule").Base(err)
-		}
-		return chinaiprule, nil
-	}
-	if strings.EqualFold(rawRule.Type, "chinasites") {
-		chinasitesrule, err := parseChinaSitesRule(msg)
-		if err != nil {
-			return nil, newError("invalid chinasites rule").Base(err)
-		}
-		return chinasitesrule, nil
-	}
 	return nil, newError("unknown router rule type: ", rawRule.Type)
-}
-
-func parseChinaIPRule(data []byte) (*router.RoutingRule, error) {
-	rawRule := new(RouterRule)
-	err := json.Unmarshal(data, rawRule)
-	if err != nil {
-		return nil, newError("invalid router rule").Base(err)
-	}
-	chinaIPs, err := loadGeoIP("CN")
-	if err != nil {
-		return nil, newError("failed to load geoip:cn").Base(err)
-	}
-	return &router.RoutingRule{
-		TargetTag: &router.RoutingRule_Tag{
-			Tag: rawRule.OutboundTag,
-		},
-		Cidr: chinaIPs,
-	}, nil
-}
-
-func parseChinaSitesRule(data []byte) (*router.RoutingRule, error) {
-	rawRule := new(RouterRule)
-	err := json.Unmarshal(data, rawRule)
-	if err != nil {
-		return nil, newError("invalid router rule").Base(err).AtError()
-	}
-	domains, err := loadGeositeWithAttr("geosite.dat", "CN")
-	if err != nil {
-		return nil, newError("failed to load geosite:cn.").Base(err)
-	}
-	return &router.RoutingRule{
-		TargetTag: &router.RoutingRule_Tag{
-			Tag: rawRule.OutboundTag,
-		},
-		Domain: domains,
-	}, nil
 }

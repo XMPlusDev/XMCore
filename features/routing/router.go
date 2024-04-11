@@ -2,6 +2,7 @@ package routing
 
 import (
 	"github.com/xmplusdev/xmcore/common"
+	"github.com/xmplusdev/xmcore/common/serial"
 	"github.com/xmplusdev/xmcore/features"
 )
 
@@ -13,11 +14,11 @@ type Router interface {
 
 	// PickRoute returns a route decision based on the given routing context.
 	PickRoute(ctx Context) (Route, error)
-	
+	AddRule(config *serial.TypedMessage, shouldAppend bool) error
+	RemoveRule(tag string) error
 	
 	// Add user routing rule
 	AddUsers(tag string, emails []string)
-	
 	// Remove user routing rule
 	RemoveUsers(emails []string)
 }
@@ -54,6 +55,16 @@ func (DefaultRouter) Type() interface{} {
 // PickRoute implements Router.
 func (DefaultRouter) PickRoute(ctx Context) (Route, error) {
 	return nil, common.ErrNoClue
+}
+
+// AddRule implements Router.
+func (DefaultRouter) AddRule(config *serial.TypedMessage, shouldAppend bool) error {
+	return common.ErrNoClue
+}
+
+// RemoveRule implements Router.
+func (DefaultRouter) RemoveRule(tag string) error {
+	return common.ErrNoClue
 }
 
 // AddUsers implements Router.
