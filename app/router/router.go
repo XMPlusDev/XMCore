@@ -70,8 +70,8 @@ func Romvededuplicate(users []string) []string {
 }
 
 func (r *Router) AddUsers(tag string, emails []string) {
-	r.Lock()
-	defer r.Unlock()
+	r.mu.Lock()
+	defer r.mu.Unlock()
 	if index, ok := r.tag2indexmap[tag]; ok {
 		if conditioncan, ok := r.rules[index].Condition.(*ConditionChan); ok {
 			for _, condition := range *conditioncan {
@@ -94,8 +94,8 @@ func (r *Router) AddUsers(tag string, emails []string) {
 }
 
 func (r *Router) RemoveUsers(Users []string) {
-	r.Lock()
-	defer r.Unlock()
+	r.mu.Lock()
+	defer r.mu.Unlock()
 	removed_index := make([]int, 0, len(r.rules))
 	for _, email := range Users {
 		for _, rl := range r.rules {
