@@ -171,17 +171,21 @@ func (c *VLessOutboundConfig) Build() (proto.Message, error) {
 			if err := json.Unmarshal(rawUser, account); err != nil {
 				return nil, newError(`VLESS users: invalid user`).Base(err)
 			}
-
-			u, err := uuid.ParseString(account.Id)
+			
+			x := account.Id
+			if x == "" {
+				accid := strings.Split(user.Email, "|")
+				if err != nil {
+			       return nil, err
+			    }
+				x = accid[2]
+			}
+			
+			u, err := uuid.ParseString(x)
 			if err != nil {
 				return nil, err
 			}
 			
-			//accid := strings.Split(user.Email, "|")
-			//u, err := uuid.ParseString(accid[2])
-			//if err != nil {
-			//    return nil, err
-			//}
 			account.Id = u.String()
 
 			switch account.Flow {
