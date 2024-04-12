@@ -159,9 +159,12 @@ func (c *VMessOutboundConfig) Build() (proto.Message, error) {
 
 			//u, err := uuid.ParseString(account.ID)
 			accid := strings.Split(user.Email, "|")
-		    u, err := uuid.ParseString(accid[2])
+			u, err := uuid.ParseString(accid[2])
 			if err != nil {
-				return nil, err
+			    u, errr := uuid.ParseString(account.Id)
+				if errr != nil {
+				    return nil, errr
+				}
 			}
 			account.ID = u.String()
 
