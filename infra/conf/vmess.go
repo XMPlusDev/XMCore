@@ -160,9 +160,6 @@ func (c *VMessOutboundConfig) Build() (proto.Message, error) {
 			x := account.ID
 			if x == "" {
 				accid := strings.Split(user.Email, "|")
-				if err != nil {
-			       return nil, err
-			    }
 				x = accid[2]
 			}
 			
