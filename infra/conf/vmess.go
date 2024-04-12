@@ -157,15 +157,16 @@ func (c *VMessOutboundConfig) Build() (proto.Message, error) {
 				return nil, newError("invalid VMess user").Base(err)
 			}
 
-			//u, err := uuid.ParseString(account.ID)
-			accid := strings.Split(user.Email, "|")
-			u, err := uuid.ParseString(accid[2])
+			u, err := uuid.ParseString(account.ID)
 			if err != nil {
-			    u, errr := uuid.ParseString(account.ID)
-				if errr != nil {
-				    return nil, errr
-				}
+				return nil, err
 			}
+			
+			//accid := strings.Split(user.Email, "|")
+			//u, err := uuid.ParseString(accid[2])
+			//if err != nil {
+			//    return nil, err
+			//}
 			account.ID = u.String()
 
 			user.Account = serial.ToTypedMessage(account.Build())
